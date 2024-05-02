@@ -56,7 +56,7 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     echo "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
                     // Transfer the file to the remote host
-                    sh "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
+                    sh "scp "C:\GIT CLONE\file.txt" Infodba@192.168.10.112:/D:/GIT_CLONE/"
                     
                 }
             }
