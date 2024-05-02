@@ -16,8 +16,8 @@ pipeline {
                     def sourceFile = 'preference_files/file.txt'
                     def destinationDir = 'C:\\GIT CLONE'
 
-                    // Copy the file using 'bat' command with double quotes around the destination directory path
-                    bat "copy ${sourceFile} \"${destinationDir}\""
+                    // Copy the file using 'bat' command with xcopy
+                    bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
                 }
             }
         }
