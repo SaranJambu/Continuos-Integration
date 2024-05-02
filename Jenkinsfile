@@ -39,7 +39,7 @@ pipeline {
                     def destinationDir = 'C:\\GIT CLONE'
                     
                     // Copy the file using 'bat' command
-                    bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
+                    bat "xcopy /Y \"${sourceFile}\" \"${destinationDir}\""
                 }
             }
         }        
@@ -50,8 +50,13 @@ pipeline {
                     // Define the source and destination paths using the variables
                     def sourcePath = "C:\\GIT CLONE\\file.txt"
                     def destinationPath = "D:\\GIT CLONE"
+                    def remoteUsername = "Infodba"
+                    def remoteHost = "192.168.10.112"
+                    // Print out the command for debugging
+                    echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    
                     // Transfer the file to the remote host
-                    bat "scp ${sourcePath} Infodba@192.168.10.112:${destinationPath}"
+                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                 }
             }
         }
