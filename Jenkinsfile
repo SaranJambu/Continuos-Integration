@@ -1,32 +1,45 @@
 pipeline {
     agent any
-    
-    def remoteHost = '192.168.1.100'
-    def remoteUsername = 'Infodba'
-    def remotePassword = 'Infodba'
-    def sourceFile = 'preference_files\\file.txt'
-    def destinationDir = 'C:\\GIT CLONE'
+
+    // Stringine variables at the top
+    String remoteHost = '192.168.1.100'
+    String remoteUsername = 'your_username'
+    String remotePassword = 'your_password'
+    String sourceFile = 'preference_files\\file.txt'
+    String destinationDir = 'C:\\GIT CLONE'
 
     stages {
         stage('Checkout') {
             steps {
+                // Checkout the code from the GitHub repository
                 git branch: 'main', credentialsId: 'SaranJambuGIT', url: 'https://github.com/SaranJambu/Continuos-Integration.git'
             }
         }
         stage('Copy File') {
             steps {
+                // Copy the specific file from the checked out repository
                 script {
-                    // Transfer the file to the remote system
-                    bat "scp ${sourceFile} ${remoteUsername}@${remoteHost}:${destinationDir}"
+                    // Copy the file using 'bat' command
+                    bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
                 }
             }
         }
-        stage('Run Command on Remote System') {
+        stage('Set Environment Variables') {
             steps {
                 script {
-                    // Connect to the remote system and run a command
-                    bat "ssh ${remoteUsername}@${remoteHost} cmd /c \"echo ${destinationDir}\\file.txt\""
+                    // Set environment variables
+                    withEnv(['TC_ROOT=C:\\Siemens\\Teamcenter14\\TR', 'TC_DATA=C:\\Siemens\\Teamcenter14\\TD']) {
+                        // Execute tc_profilevars script
+                        bat 'C:\\Siemens\\Teamcenter14\\TD\\tc_profilevars'
+                    }
                 }
+            }
+        }
+        stage('Transfer File to Remote Host') {
+            steps {
+                // Use SSH or any other method to transfer the file to the remote host
+                // Example:
+                bat "scp ${sourceFile} ${remoteUsername}@${remoteHost}:${destinationDir}"
             }
         }
     }
