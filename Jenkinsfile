@@ -56,7 +56,7 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
-                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    sh "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                 }
             }
         }
