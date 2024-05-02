@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Define the source file and destination directory
                     def sourceFile = 'Preference_cm/file.txt'
-                    def destinationDir = 'D:\GIT CLONE'
+                    def destinationDir = 'D:\\GIT CLONE'
 
                     // Copy the file using 'sh' command
                     sh "cp ${sourceFile} ${destinationDir}"
