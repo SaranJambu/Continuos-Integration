@@ -57,6 +57,7 @@ pipeline {
                     
                     // Transfer the file to the remote host
                     sh "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
+                    echo "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
                 }
             }
         }
