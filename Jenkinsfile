@@ -49,14 +49,15 @@ pipeline {
                 script {
                     // Define the source and destination paths using the variables
                     def sourcePath = "C:\\GIT CLONE\\file.txt"
-                    def destinationPath = "D:\\GIT_CLONE\\"
+                    def destinationPath = "\\D:\\GIT_CLONE\\"
                     def remoteUsername = "Infodba"
                     def remoteHost = "192.168.10.112"
                     // Print out the command for debugging
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     echo "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
                     // Transfer the file to the remote host
-                    sh "scp "C:\GIT CLONE\file.txt" Infodba@192.168.10.112:/D:/GIT_CLONE/"
+                    sh "sh "scp \"${sourcePath}\" ${remoteUsername}@${remoteHost}:${destinationPath}"
+"
                     
                 }
             }
