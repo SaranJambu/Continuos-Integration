@@ -1,36 +1,49 @@
 pipeline {
     agent any
 
-    // Define variables at the top
-    
-     stages {
+    stages {
         stage('Set Variables') {
             steps {
                 script {
+                    // Define variables inside the stage
                     def remoteHost = '192.168.10.112'
                     def remoteUsername = 'Infodba'
                     def remotePassword = 'Infodba'
                     def sourceFile = 'preference_files\\file.txt'
                     def destinationDir = 'C:\\GIT CLONE'
+                    
+                    // Use the variables within the same stage
+                    echo "Remote Host: ${remoteHost}"
+                    echo "Remote Username: ${remoteUsername}"
+                    echo "Source File: ${sourceFile}"
+                    echo "Destination Directory: ${destinationDir}"
+                    
+                    // Proceed with other steps within this stage
                 }
             }
         }
-    stages {
+        
         stage('Checkout') {
             steps {
                 // Checkout the code from the GitHub repository
                 git branch: 'main', credentialsId: 'SaranJambuGIT', url: 'https://github.com/SaranJambu/Continuos-Integration.git'
             }
         }
+        
         stage('Copy File') {
             steps {
                 // Copy the specific file from the checked out repository
                 script {
+                    // Use the variables defined in the previous stage
+                    def sourceFile = 'preference_files\\file.txt'
+                    def destinationDir = 'C:\\GIT CLONE'
+                    
                     // Copy the file using 'bat' command
                     bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
                 }
             }
         }
+        
         stage('Set Environment Variables') {
             steps {
                 script {
@@ -42,6 +55,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Transfer File to Remote Host') {
             steps {
                 // Use SSH or any other method to transfer the file to the remote host
@@ -50,5 +64,4 @@ pipeline {
             }
         }
     }
-}
 }
