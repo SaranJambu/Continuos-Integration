@@ -1,14 +1,19 @@
 pipeline {
     agent any
 
-    // Stringine variables at the top
-    String remoteHost = '192.168.1.100'
-    String remoteUsername = 'your_username'
-    String remotePassword = 'your_password'
-    String sourceFile = 'preference_files\\file.txt'
-    String destinationDir = 'C:\\GIT CLONE'
-
     stages {
+        stage('Set Variables') {
+            steps {
+                script {
+                    // Define variables
+                    def remoteHost = '192.168.1.100'
+                    def remoteUsername = 'your_username'
+                    def remotePassword = 'your_password'
+                    def sourceFile = 'preference_files\\file.txt'
+                    def destinationDir = 'C:\\GIT CLONE'
+                }
+            }
+        }
         stage('Checkout') {
             steps {
                 // Checkout the code from the GitHub repository
