@@ -45,8 +45,13 @@ pipeline {
         }        
         stage('Transfer File to Remote Host') {
             steps {
-		def sourceFile='C:\\GIT CLONE'
-                bat "scp ${sourceFile} ${remoteUsername}@${remoteHost}:${destinationDir}"
+                // Use the variables defined in the 'Set Variables' stage
+                script {
+                    // Define the source and destination paths using the variables
+                    def sourcePath = "${destinationDir}\\file.txt"
+                    // Transfer the file to the remote host
+                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationDir}"
+                }
             }
         }
     }
