@@ -54,10 +54,10 @@ pipeline {
                     def remoteHost = "192.168.10.112"
                     // Print out the command for debugging
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
-                    
+                    echo "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
                     // Transfer the file to the remote host
                     sh "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
-                    echo "scp "${sourcePath}" ${remoteUsername}@${remoteHost}:/${destinationPath}"
+                    
                 }
             }
         }
