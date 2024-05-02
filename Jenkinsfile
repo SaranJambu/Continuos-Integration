@@ -1,19 +1,14 @@
 pipeline {
     agent any
 
+    // Define variables at the top
+    def remoteHost = '192.168.10.112'
+    def remoteUsername = 'Infodba'
+    def remotePassword = 'Infodba'
+    def sourceFile = 'preference_files\\file.txt'
+    def destinationDir = 'C:\\GIT CLONE'
+
     stages {
-        stage('Set Variables') {
-            steps {
-                script {
-                    // Define variables
-                    def remoteHost = '192.168.1.100'
-                    def remoteUsername = 'your_username'
-                    def remotePassword = 'your_password'
-                    def sourceFile = 'preference_files\\file.txt'
-                    def destinationDir = 'C:\\GIT CLONE'
-                }
-            }
-        }
         stage('Checkout') {
             steps {
                 // Checkout the code from the GitHub repository
