@@ -42,24 +42,9 @@ pipeline {
                     bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
                 }
             }
-        }
-        
-        stage('Set Environment Variables') {
-            steps {
-                script {
-                    // Set environment variables
-                    withEnv(['TC_ROOT=C:\\Siemens\\Teamcenter14\\TR', 'TC_DATA=C:\\Siemens\\Teamcenter14\\TD']) {
-                        // Execute tc_profilevars script
-                        bat 'C:\\Siemens\\Teamcenter14\\TD\\tc_profilevars'
-                    }
-                }
-            }
-        }
-        
+        }        
         stage('Transfer File to Remote Host') {
             steps {
-                // Use SSH or any other method to transfer the file to the remote host
-                // Example:
                 bat "scp ${sourceFile} ${remoteUsername}@${remoteHost}:${destinationDir}"
             }
         }
