@@ -45,6 +45,7 @@ pipeline {
         }        
         stage('Transfer File to Remote Host') {
             steps {
+				sourceFile='C:\\GIT CLONE'
                 bat "scp ${sourceFile} ${remoteUsername}@${remoteHost}:${destinationDir}"
             }
         }
