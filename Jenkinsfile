@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from the GitHub repository
-                git 'https://github.com/SaranJambu/Continuos-Integration.git'
+                git branch: 'main', credentialsId: 'SaranJambuGIT', url: 'https://github.com/SaranJambu/Continuos-Integration.git'
             }
         }
         stage('Copy File') {
