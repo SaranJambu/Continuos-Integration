@@ -13,10 +13,10 @@ pipeline {
                 // Copy the specific file from the checked out repository
                 script {
                     // Define the source file and destination directory
-                    def sourceFile = 'preference_files/file.txt'
-                    def destinationDir = 'C:\\GIT CLONE'
+                    def sourceFile = 'preference_files\\file.txt' // Corrected source file path
+                    def destinationDir = 'C:\\GIT CLONE' // Corrected destination directory path
 
-                    // Copy the file using 'bat' command with xcopy
+                    // Copy the file using 'bat' command
                     bat "xcopy /Y ${sourceFile} \"${destinationDir}\""
                 }
             }
