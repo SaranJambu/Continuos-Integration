@@ -13,7 +13,7 @@ pipeline {
                 // Copy the specific file from the checked out repository
                 script {
                     // Define the source file and destination directory
-                    def sourceFile = 'Preference_cm/file.txt'
+                    def sourceFile = 'preference_files/file.txt'
                     def destinationDir = 'D:\\GIT CLONE'
 
                     // Copy the file using 'sh' command
