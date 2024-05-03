@@ -34,7 +34,7 @@ pipeline {
                 // Use the variables defined in the 'Set Variables' stage
                 script {
                     // Define the source and destination paths using the variables
-                    def sourceFile = 'preference_files\\file.txt' // Corrected source file path
+                    def sourcePath = 'preference_files\\file.txt' // Corrected source file path
                     def destinationPath = "/D:/GIT_CLONE/" // Removed extra backslash
                     def remoteHost = "192.168.10.112"
                     def remoteUsername = "Infodba"
