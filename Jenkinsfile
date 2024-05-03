@@ -50,7 +50,8 @@ pipeline {
                     // Define the source and destination paths using the variables
                     def sourcePath = "C:/GIT CLONE/file.txt" // Adjusted path separator
                     def destinationPath = "/D:/GIT_CLONE/" // Removed extra backslash
-                    
+                    def remoteHost = "192.168.10.112"
+                    def remoteUsername = "Infodba"
                     // Print out the command for debugging
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
