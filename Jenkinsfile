@@ -28,27 +28,13 @@ pipeline {
                 // Checkout the code from the GitHub repository
                 git branch: 'main', credentialsId: 'SaranJambuGIT', url: 'https://github.com/SaranJambu/Continuos-Integration.git'
             }
-        }
-        
-        stage('Copy File') {
-            steps {
-                // Copy the specific file from the checked out repository
-                script {
-                    // Use the variables defined in the previous stage
-                    def sourceFile = 'preference_files\\file.txt' // Corrected source file path
-                    def destinationDir = 'C:\\GIT CLONE' // Corrected destination directory path
-                    
-                    // Copy the file using 'bat' command
-                    bat "xcopy /Y \"${sourceFile}\" \"${destinationDir}\""
-                }
-            }
         }        
         stage('Transfer File to Remote Host') {
             steps {
                 // Use the variables defined in the 'Set Variables' stage
                 script {
                     // Define the source and destination paths using the variables
-                    def sourcePath = "C:/GIT CLONE/file.txt" // Adjusted path separator
+                    def sourceFile = 'preference_files\\file.txt' // Corrected source file path
                     def destinationPath = "/D:/GIT_CLONE/" // Removed extra backslash
                     def remoteHost = "192.168.10.112"
                     def remoteUsername = "Infodba"
