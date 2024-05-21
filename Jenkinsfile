@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Define variables inside the stage
-                    def remoteHost = '192.168.10.112'
+                    def remoteHost = '192.168.10.127'
                     def remoteUsername = 'Infodba'
                     def remotePassword = 'Infodba' // Consider using SSH key authentication instead
                     def sourceFile = 'preference_files//file.txt' // Adjusted path separator
