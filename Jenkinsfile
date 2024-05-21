@@ -8,6 +8,7 @@ pipeline {
         REMOTE_PASSWORD = 'Infodba' // Consider using SSH key authentication instead
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Adjusted path separator
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Adjusted path separator
+		PREFS_MANAGER_CMD = 'preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE'
         
     }
 
@@ -49,5 +50,14 @@ pipeline {
                 }
             }
         }
+		stage('Run Preferences Manager Utility') {
+            steps {
+                script {
+                    // Execute the preferences_manager command
+                    def command = env.PREFS_MANAGER_CMD
+                    echo "Running command: ${command}"
+                    sh "ssh ${env.REMOTE_USERNAME}@${env.REMOTE_HOST} '${command}'"
+                }
+            }
     }
 }
