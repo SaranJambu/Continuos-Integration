@@ -37,7 +37,7 @@ pipeline {
                 script {
                     // Use the global variables
                     def sourcePath = env.SOURCE_FILE // Corrected source file path
-                    def destinationPath = "/D:/WorkingDir/Preferences/Group" // Removed extra backslash
+                    def destinationPath = "/D:/WorkingDir/Preferences/Group/" // Removed extra backslash
                     def remoteHost = env.REMOTE_HOST
                     def remoteUsername = env.REMOTE_USERNAME
                     
