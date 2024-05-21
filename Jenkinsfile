@@ -6,8 +6,9 @@ pipeline {
         REMOTE_HOST = '192.168.10.127'
         REMOTE_USERNAME = 'Infodba'
         REMOTE_PASSWORD = 'Infodba' // Consider using SSH key authentication instead
-        SOURCE_FILE = 'preference_files//file.txt' // Adjusted path separator
-        DESTINATION_DIR = 'C://GIT CLONE' // Adjusted path separator
+        SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Adjusted path separator
+        DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Adjusted path separator
+        
     }
 
     stages {
