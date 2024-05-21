@@ -8,7 +8,7 @@ pipeline {
         REMOTE_PASSWORD = 'Infodba' // Consider using SSH key authentication instead
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Adjusted path separator
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Adjusted path separator
-		PREFS_MANAGER_CMD = 'set TC_ROOT=D:\TC14\TC_ROOT && set TC_DATA=D:\TC14\tcdata && D:\TC14\tcdata\tc_profilevars && preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE'
+		PREFS_MANAGER_CMD = 'set TC_ROOT=D:\\TC14\\TC_ROOT && set TC_DATA=D:\\TC14\\tcdata && D:\\TC14\\tcdata\\tc_profilevars && preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE'
 
     }
 
