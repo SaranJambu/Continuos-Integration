@@ -53,10 +53,18 @@ pipeline {
 		stage('Run Preferences Manager Utility') {
             steps {
                 script {
-                    // Execute the preferences_manager command
-                    def command = env.PREFS_MANAGER_CMD
-                    echo "Running command: ${command}"
-                    sh "ssh ${env.REMOTE_USERNAME}@${env.REMOTE_HOST} '${command}'"
+                    echo 'Running preferences_manager command...'
+
+                    def TC_ROOT = 'D:\\TC14\\TC_ROOT'
+                    def TC_DATA = 'D:\\TC14\\tcdata'
+                    def PREFS_MANAGER_CMD = """
+                        set TC_ROOT=${TC_ROOT} && set TC_DATA=${TC_DATA} && ${TC_DATA}\\tc_profilevars &&
+                        "C:\\path\\to\\preferences_manager" -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE
+                    """
+                    
+                    echo "Command: ${PREFS_MANAGER_CMD}"
+    
+                    bat label: 'Run preferences_manager', script: PREFS_MANAGER_CMD
                 }
             }
     }
