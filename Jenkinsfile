@@ -1,22 +1,25 @@
 pipeline {
     agent any
 
+    // Define global variables
+    environment {
+        REMOTE_HOST = '192.168.10.127'
+        REMOTE_USERNAME = 'Infodba'
+        REMOTE_PASSWORD = 'Infodba' // Consider using SSH key authentication instead
+        SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Adjusted path separator
+        DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Adjusted path separator
+        
+    }
+
     stages {
         stage('Set Variables') {
             steps {
                 script {
-                    // Define variables inside the stage
-                    def remoteHost = '192.168.10.112'
-                    def remoteUsername = 'Infodba'
-                    def remotePassword = 'Infodba' // Consider using SSH key authentication instead
-                    def sourceFile = 'preference_files//file.txt' // Adjusted path separator
-                    def destinationDir = 'C://GIT CLONE' // Adjusted path separator
-                    
-                    // Use the variables within the same stage
-                    echo "Remote Host: ${remoteHost}"
-                    echo "Remote Username: ${remoteUsername}"
-                    echo "Source File: ${sourceFile}"
-                    echo "Destination Directory: ${destinationDir}"
+                    // Print out the global variables
+                    echo "Remote Host: ${env.REMOTE_HOST}"
+                    echo "Remote Username: ${env.REMOTE_USERNAME}"
+                    echo "Source File: ${env.SOURCE_FILE}"
+                    echo "Destination Directory: ${env.DESTINATION_DIR}"
                     
                     // Proceed with other steps within this stage
                 }
@@ -31,13 +34,13 @@ pipeline {
         }        
         stage('Transfer File to Remote Host') {
             steps {
-                // Use the variables defined in the 'Set Variables' stage
                 script {
-                    // Define the source and destination paths using the variables
-                    def sourcePath = 'preference_files\\file.txt' // Corrected source file path
-                    def destinationPath = "/D:/GIT_CLONE/" // Removed extra backslash
-                    def remoteHost = "192.168.10.112"
-                    def remoteUsername = "Infodba"
+                    // Use the global variables
+                    def sourcePath = env.SOURCE_FILE // Corrected source file path
+                    def destinationPath = "/D:/WorkingDir/Preferences/Group" // Removed extra backslash
+                    def remoteHost = env.REMOTE_HOST
+                    def remoteUsername = env.REMOTE_USERNAME
+                    
                     // Print out the command for debugging
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
