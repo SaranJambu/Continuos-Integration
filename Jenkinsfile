@@ -2,6 +2,7 @@ def remote = [:]
 remote.name = 'Infodba'
 remote.host = '192.168.10.127'
 remote.allowAnyHosts = true
+
 pipeline {
     agent any
 
@@ -10,7 +11,7 @@ pipeline {
         REMOTE_USERNAME = 'Infodba'
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Retained double slashes
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Retained double slashes
-		REMOTE_USER=credentials('SysUser')
+        REMOTE_USER = credentials('SysUser')
     }
 
     stages {
@@ -50,11 +51,8 @@ pipeline {
         stage('Running the command in remote host') {
             steps {
                 script {
-				remote.user=env.REMOTE_USER_USR
-				remote.password=env.REMOTE_USER_PWD
-                    
+                    sshCommand remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat/"
                 }
-				sshCommand(remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat/"
             }
         }
     }
