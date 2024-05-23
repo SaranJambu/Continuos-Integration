@@ -50,23 +50,25 @@ pipeline {
                 }
             }
         }
-		stage('Run Preferences Manager Utility') {
+        stage('Set Environment Variables and Run Commands') {
             steps {
                 script {
-                    echo 'Running preferences_manager command...'
-
-                    def TC_ROOT = 'D:\\TC14\\TC_ROOT'
-                    def TC_DATA = 'D:\\TC14\\tcdata'
-                    def PREFS_MANAGER_CMD = """
-                        set TC_ROOT=${TC_ROOT} && set TC_DATA=${TC_DATA} && ${TC_DATA}\\tc_profilevars &&
-                        "C:\\path\\to\\preferences_manager" -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE
-                    """
+                    bat 'ssh Infodba@192.168.10.127'
+					
+                    bat 'SET TC_ROOT=D:\\TC14\\TC_ROOT'
                     
-                    echo "Command: ${PREFS_MANAGER_CMD}"
-    
-                    bat label: 'Run preferences_manager', script: PREFS_MANAGER_CMD
+                    // Set TC_DATA environment variable
+                    bat 'SET TC_DATA=D:\\TC14\\tcdata'
+                    
+                    // Execute tc_profilevars
+                    bat 'D:\\TC14\\tcdata\\tc_profilevars'
+                    
+                    // Run preferences_manager with specified arguments
+                    bat 'preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE'
                 }
             }
+        }
     }
 }
-}
+
+
