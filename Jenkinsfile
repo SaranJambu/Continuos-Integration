@@ -51,7 +51,18 @@ pipeline {
         stage('Running the command in remote host') {
             steps {
                 script {
-                    sshCommand remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat/"
+                    withCredentials([usernamePassword(credentialsId: 'SysUser', usernameVariable: 'REMOTE_USER_USR', passwordVariable: 'REMOTE_USER_PWD')]) {
+                // Configure remote object
+                def remote = [
+                    name: 'Infodba',
+                    host: '192.168.10.127',
+                    allowAnyHosts: true,
+                    user: env.REMOTE_USER_USR,  // Ensure REMOTE_USER_USR contains the username
+                    password: env.REMOTE_USER_PWD  // Ensure REMOTE_USER_PWD contains the password
+                ]
+
+                // Execute command on remote host
+                sshCommand remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat"
                 }
             }
         }
