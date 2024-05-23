@@ -4,7 +4,6 @@ pipeline {
     environment {
         REMOTE_HOST = '192.168.10.127'
         REMOTE_USERNAME = 'Infodba'
-        // It's recommended to use SSH keys for authentication
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Retained double slashes
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Retained double slashes
     }
@@ -54,8 +53,14 @@ pipeline {
                         preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE
                     '''
                     
+                    // Properly format the SSH command for Windows
+                    def sshCommand = "ssh -T ${REMOTE_USERNAME}@${REMOTE_HOST} \"${remoteCommand}\""
+                    
+                    // Print out the SSH command for debugging
+                    echo "Executing SSH command: ${sshCommand}"
+                    
                     // Execute the combined command on the remote host
-                    bat "ssh ${REMOTE_USERNAME}@${REMOTE_HOST} \"${remoteCommand}\""
+                    bat sshCommand
                 }
             }
         }
