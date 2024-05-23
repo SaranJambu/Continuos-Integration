@@ -1,3 +1,7 @@
+def remote = [:]
+remote.name = "Infodba"
+remote.host = 192.168.10.127
+remote.allowAnyHosts = true
 pipeline {
     agent any
 
@@ -6,6 +10,7 @@ pipeline {
         REMOTE_USERNAME = 'Infodba'
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Retained double slashes
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Retained double slashes
+		REMOTE_USER=credentials('SysUser')
     }
 
     stages {
@@ -42,26 +47,14 @@ pipeline {
             }
         }
 
-        stage('Set Environment Variables and Run Commands') {
+        stage('Running the command in remote host') {
             steps {
                 script {
-                    // Combine all commands into one SSH command
-                    def remoteCommand = '''
-                        SET TC_ROOT=D:\\TC14\\TC_ROOT &&
-                        SET TC_DATA=D:\\TC14\\tcdata &&
-                        D:\\TC14\\tcdata\\tc_profilevars &&
-                        preferences_manager -u=infodba -p=infodba -g=dba -mode=import -scope=SITE -file=D:\\WorkingDir\\Preferences\\Group\\Preference.xml -action=OVERRIDE
-                    '''
+				remote.user=env.REMOTE_USER_USR
+				remote.password=env.REMOTE_USER_PWD
                     
-                    // Properly format the SSH command for Windows
-                    def sshCommand = "ssh -T ${REMOTE_USERNAME}@${REMOTE_HOST} \"${remoteCommand}\""
-                    
-                    // Print out the SSH command for debugging
-                    echo "Executing SSH command: ${sshCommand}"
-                    
-                    // Execute the combined command on the remote host
-                    bat sshCommand
                 }
+				sshCommand(remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat/"
             }
         }
     }
