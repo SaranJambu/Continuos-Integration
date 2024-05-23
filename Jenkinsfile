@@ -1,6 +1,6 @@
 def remote = [:]
-remote.name = "Infodba"
-remote.host = 192.168.10.127
+remote.name = 'Infodba'
+remote.host = '192.168.10.127'
 remote.allowAnyHosts = true
 pipeline {
     agent any
