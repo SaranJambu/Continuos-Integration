@@ -36,7 +36,9 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
-                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    sshagent(['sshCredentaialInfodba']) {
+                        sh "ssh  ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    }
                 }
             }
         }
@@ -50,7 +52,9 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
-                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+					sshagent(['sshCredentaialInfodba']) {
+                        sh "ssh  ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    }
                 }
             }
 		}
