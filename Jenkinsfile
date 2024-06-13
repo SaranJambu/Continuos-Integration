@@ -1,14 +1,14 @@
 pipeline {
     agent any
-
     environment {
         REMOTE_HOST = '192.168.10.127'
         REMOTE_USERNAME = 'Infodba'
         SOURCE_FILE = 'Admin_Data//Preferences//Group//Preference.xml' // Retained double slashes
+        SOURCE_CODE = 'CppCode//ITK.cpp'
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group' // Retained double slashes
+        DESTINATION_DIR_CODE = 'D://CppCode//ITK'
         REMOTE_USER = credentials('SysUser')
     }
-
     stages {
         stage('Set Variables') {
             steps {
@@ -16,17 +16,16 @@ pipeline {
                     echo "Remote Host: ${env.REMOTE_HOST}"
                     echo "Remote Username: ${env.REMOTE_USERNAME}"
                     echo "Source File: ${env.SOURCE_FILE}"
+                    echo "Source code: ${env.SOURCE_CODE}"
                     echo "Destination Directory: ${env.DESTINATION_DIR}"
                 }
             }
         }
-
         stage('Checkout') {
             steps {
                 git branch: 'main', credentialsId: 'SaranJambuGIT', url: 'https://github.com/SaranJambu/Continuos-Integration.git'
             }
         }
-
         stage('Transfer File to Remote Host') {
             steps {
                 script {
@@ -34,7 +33,6 @@ pipeline {
                     def destinationPath = env.DESTINATION_DIR
                     def remoteHost = env.REMOTE_HOST
                     def remoteUsername = env.REMOTE_USERNAME
-
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
@@ -42,25 +40,33 @@ pipeline {
                 }
             }
         }
-
-        stage('Running the command in remote host') {
+        stage('Transfer file to Remote Host and Code check Executing') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'SysUser', usernameVariable: 'REMOTE_USER_USR', passwordVariable: 'REMOTE_USER_PWD')]) {
-                // Configure remote object
-                def remote = [
-                    name: 'Infodba',
-                    host: '192.168.10.127',
-                    allowAnyHosts: true,
-                    user: env.REMOTE_USER_USR,  // Ensure REMOTE_USER_USR contains the username
-                    password: env.REMOTE_USER_PWD  // Ensure REMOTE_USER_PWD contains the password
-                ]
-
-                // Execute command on remote host
-                sshCommand remote: remote, command: "D:/TC14/TC_ROOT/tc_menu/tc_config1.bat"
+                    def sourcePath = env.SOURCE_CODE
+                    def destinationPath = env.DESTINATION_DIR_CODE
+                    def remoteHost = env.REMOTE_HOST
+                    def remoteUsername = env.REMOTE_USERNAME
+                    echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                    
+                    // Transfer the file to the remote host
+                    bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
+                }
+            }
+            steps {
+                script {
+                    def sourcePath = env.SOURCE_CODE
+                    def destinationPath = env.DESTINATION_DIR_CODE
+                    def remoteHost = env.REMOTE_HOST
+                    def remoteUsername = env.REMOTE_USERNAME
+                    echo "Executing command: ssh ${remoteUsername}@${remoteHost} 'cppcheck --enable=all \"${destinationPath}\"'"
+                    
+                    // Transfer the file to the remote host
+                    sshagent(['sshCredentaialInfodba']) {
+                        sh "ssh ${remoteUsername}@${remoteHost} 'cppcheck --enable=all ${destinationPath}'"
+                    }
                 }
             }
         }
     }
-}
 }
