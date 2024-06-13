@@ -53,6 +53,8 @@ pipeline {
                     bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                 }
             }
+		
+		stage('Transfer file to Remote Host and Code check Executing') {
             steps {
                 script {
                     def sourcePath = env.SOURCE_CODE
@@ -68,5 +70,6 @@ pipeline {
                 }
             }
         }
-    }
+	}
+}
 }
