@@ -53,6 +53,7 @@ pipeline {
                     bat "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                 }
             }
+		}
 		
 		stage('Transfer file to Remote Host and Code check Executing') {
             steps {
@@ -71,5 +72,4 @@ pipeline {
             }
         }
 	}
-}
 }
