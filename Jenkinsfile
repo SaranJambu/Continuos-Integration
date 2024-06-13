@@ -7,7 +7,6 @@ pipeline {
         SOURCE_CODE = 'CppCode//ITK.cpp'
         DESTINATION_DIR = 'D://WorkingDir//Preferences//Group'
         DESTINATION_DIR_CODE = 'D://CppCode//ITK'
-        REMOTE_USER = credentials('SysUser')
     }
     stages {
         stage('Set Variables') {
@@ -18,7 +17,6 @@ pipeline {
                     echo "Source File: ${env.SOURCE_FILE}"
                     echo "Source code: ${env.SOURCE_CODE}"
                     echo "Destination Directory: ${env.DESTINATION_DIR}"
-                    echo "Destination Directory Code: ${env.DESTINATION_DIR_CODE}"
                 }
             }
         }
@@ -37,7 +35,7 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
-                    sshagent(['SysUser']) {
+                    sshagent(['sshCredentaialInfodba']) {
                         sh "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     }
                 }
@@ -53,7 +51,7 @@ pipeline {
                     echo "Executing command: scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     
                     // Transfer the file to the remote host
-                    sshagent(['SysUser']) {
+                    sshagent(['sshCredentaialInfodba']) {
                         sh "scp ${sourcePath} ${remoteUsername}@${remoteHost}:${destinationPath}"
                     }
                 }
@@ -68,7 +66,7 @@ pipeline {
                     echo "Executing command: ssh ${remoteUsername}@${remoteHost} 'cppcheck --enable=all \"${destinationPath}\"'"
                     
                     // Run cppcheck on the remote host
-                    sshagent(['SysUser']) {
+                    sshagent(['sshCredentaialInfodba']) {
                         sh "ssh ${remoteUsername}@${remoteHost} 'cppcheck --enable=all \"${destinationPath}\"'"
                     }
                 }
