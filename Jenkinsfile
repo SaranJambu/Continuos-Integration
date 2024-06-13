@@ -55,7 +55,7 @@ pipeline {
             }
 		}
 		
-		stage('Transfer file to Remote Host and Code check Executing') {
+		stage('Transfer file to Remote') {
             steps {
                 script {
                     def sourcePath = env.SOURCE_CODE
