@@ -1,5 +1,5 @@
 cd /d D:\GIT\CI\Continuos-Integration\report 
-D:
-git add D:\GIT\CI\Continuos-Integration\report
-git commit -m 'Adding the report_3.xml 
+D: 
+git add report_4.xml 
+git commit -m "Adding the report_4.xml" 
 git push 
