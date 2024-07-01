@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stdio.h&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="D:\CppCode\CppCode\CppcheckSample.cpp" line="1" column="0"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[10]&apos; accessed at index 100, which is out of bounds." verbose="Array &apos;a[10]&apos; accessed at index 100, which is out of bounds." cwe="788" file0="D:/CppCode/CppCode/CppcheckSample.cpp">
+            <location file="D:\CppCode\CppCode\CppcheckSample.cpp" line="25" column="3" info="Array index out of bounds"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: a" verbose="Uninitialized variable: a" cwe="457" file0="D:/CppCode/CppCode/CppcheckSample.cpp">
+            <location file="D:\CppCode\CppCode\CppcheckSample.cpp" line="7" column="4"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;a[100]&apos; is assigned a value that is never used." verbose="Variable &apos;a[100]&apos; is assigned a value that is never used." cwe="563" file0="D:/CppCode/CppCode/CppcheckSample.cpp">
+            <location file="D:\CppCode\CppCode\CppcheckSample.cpp" line="25" column="8"/>
+            <symbol>a[100]</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;a&apos; is not assigned a value." verbose="Variable &apos;a&apos; is not assigned a value." cwe="665" file0="D:/CppCode/CppCode/CppcheckSample.cpp">
+            <location file="D:\CppCode\CppCode\CppcheckSample.cpp" line="6" column="8"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 161/592 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 161/592 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>
