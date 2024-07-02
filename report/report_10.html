@@ -1,0 +1,57 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Static Code Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; }
+            .summary { margin-bottom: 10px; }
+            .error p { margin-bottom: 5px; }
+            .header { text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Static Code Analysis Report</h1>
+        </div>
+        <div class="summary">
+            <h2>Summary</h2>
+            
+            <p><strong>Information:</strong> 2</p>
+            
+            <p><strong>Error:</strong> 2</p>
+            
+            <p><strong>Style:</strong> 2</p>
+            
+        </div>
+        
+        <div class="error-list">
+            <h2>Error</h2>
+            
+            <p><em><strong>arrayIndexOutOfBounds</strong>; <strong>Severity:</strong> error; Array 'a[10]' accessed at index 100, which is out of bounds.; Line: 25; File: C:\Users\infodba\Documents\Report\Code\CppcheckSample.cpp</em></p>
+            
+            <p><em><strong>uninitvar</strong>; <strong>Severity:</strong> error; Uninitialized variable: a; Line: 7; File: C:\Users\infodba\Documents\Report\Code\CppcheckSample.cpp</em></p>
+            
+        </div>
+        
+        <div class="error-list">
+            <h2>Style</h2>
+            
+            <p><em><strong>unreadVariable</strong>; <strong>Severity:</strong> style; Variable 'a[100]' is assigned a value that is never used.; Line: 25; File: C:\Users\infodba\Documents\Report\Code\CppcheckSample.cpp</em></p>
+            
+            <p><em><strong>unassignedVariable</strong>; <strong>Severity:</strong> style; Variable 'a' is not assigned a value.; Line: 6; File: C:\Users\infodba\Documents\Report\Code\CppcheckSample.cpp</em></p>
+            
+        </div>
+        
+        <div class="error-list">
+            <h2>Information</h2>
+            
+            <p><em><strong>missingIncludeSystem</strong>; <strong>Severity:</strong> information; Include file: <stdio.h> not found. Please note: Cppcheck does not need standard library headers to get proper results.; Line: 1; File: C:\Users\infodba\Documents\Report\Code\CppcheckSample.cpp</em></p>
+            
+            <p><em><strong>checkersReport</strong>; <strong>Severity:</strong> information; Active checkers: 166/802 (use --checkers-report=<filename> to see details); Line: N/A; File: N/A</em></p>
+            
+        </div>
+        
+    </body>
+    </html>
+    
