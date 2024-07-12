@@ -21,7 +21,7 @@
     <preference name="A7CUS_ITK_ITEM.RENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>ItemRR</value>
+        <value>ItemR</value>
       </context>
     </preference>
     <preference name="A7CUS_ITK_ITEMMaster_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
