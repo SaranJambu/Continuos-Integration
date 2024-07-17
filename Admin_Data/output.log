@@ -1,0 +1,230 @@
+Executing = preferences_manager infodba infodba dba -mode=import -scope=SITE -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\GroupPreference.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\GroupPreference.xml'...
+
+Executing = preferences_manager infodba infodba dba -mode=import -scope=SITE -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\GroupPreference_1.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\GroupPreference_1.xml'...
+
+Executing = preferences_manager infodba infodba dba -mode=import -scope=SITE -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\Preference.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\Group\Preference.xml'...
+
+
+The import operation has succeeded.
+
+The report file is located at "C:\Users\infodba\AppData\Local\Temp\preferences_manager_2024715114733.log".
+Executing = preferences_manager infodba infodba dba -mode=import -scope=SITE -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\Site\SitePreference.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\Site\SitePreference.xml'...
+
+Executing = preferences_manager infodba infodba dba -mode=import -scope=SITE -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\Site\SitePreference_1.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\Site\SitePreference_1.xml'...
+
+Executing = preferences_manager infodba infodba dba -mode=import -scope=USER -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\User\UserPreference.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\User\UserPreference.xml'...
+
+Executing = preferences_manager infodba infodba dba -mode=import -scope=USER -action=OVERRIDE -file=C:\GIT\Continuos-Integration\Admin_Data\Preferences\User\UserPreference_1.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+Importing the XML preference file 'C:\GIT\Continuos-Integration\Admin_Data\Preferences\User\UserPreference_1.xml'...
+
+Executing = import_file infodba infodba dba -f=C:\GIT\Continuos-Integration\Admin_Data\Stylesheets\ItemRevSummary.xml -ref=XMLRendering -type=XMLRenderingStylesheet -de=r -d=ItemRevSummary
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+Executing = import_file infodba infodba dba -f=C:\GIT\Continuos-Integration\Admin_Data\Stylesheets\StyleSheets.xml -ref=XMLRendering -type=XMLRenderingStylesheet -de=r -d=StyleSheets
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+Executing = bmide_manage_batch_lovs infodba infodba dba -option=update -file=C:\GIT\Continuos-Integration\Admin_Data\LOVs\LOV.xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+Usage:$TC_ROOT/bin/bmide_manage_batch_lovs
+      [-u=<user id> [-p=<password> | -pf=<path to password file>] -g=<group>]
+      -option=<update|extract|report>
+      -file=<filename>
+      [-lang=<localization folder>]
+      [-lov=<all|comma separated LOV names>]
+      [-log=<log file path>] [-h]
+
+This utility is for managing the LOVs external to BMIDE. The utility can update
+and extract the values in LOVs that are marked as "managed externally" on their
+creation in the BMIDE. If the update option is used then all the existing LOV 
+values will be deleted and the values defined in the input file will be added.
+The utility can also generate the report for all or some specific LOVs that are
+managed extrernally.
+
+Options:
+-u=            Teamcenter user ID.
+-p=            Teamcenter password associated with the -u=<user_id> argument.
+-pf=           Teamcenter password file associated with the -u=<user_id> argument.
+-g=            Teamcenter group associated with the -u=<user_id> argument.
+-option=       <update|extract|report>
+               update :   updates all the LOVs defined in the input file.
+               extract:   extracts all the LOVs managed by this utility 
+                          including their localization in the file specified.
+                          The user can control the LOVs that have to be 
+                          extracted by specifying the names.
+               report :   Provides a reports of all the LOVs managed by this
+                          utility in the Teamcenter Databse. User can get the
+                          report of specific LOVs by  providing the names as 
+                          input.
+-lov=          <all|comma separated LOV names>. Optional and supported only 
+               for the report and extract option.
+-file=         In case of update the path to the file defining the LOVs, in 
+               case of extract the path of file where the extracted LOVs will
+               be saved and in case of report the file where the generated 
+               report needs to be saved. The report is generated only in HTML
+               format, so if the file extension is not provided as .htm or .html
+               then .html extension will be appended to the filename provided.
+-lang=         Path to the directory where the localization files to update 
+               are kept.
+-log=          Full path to the file where logs will be written. This is an 
+               optional argument.
+-h             Displays help for this utility.
+
+
+
+***FAILURE***
+The batch utility operation has failed. For more details, please refer to the log file: C:\Users\infodba\AppData\Local\Temp\bmide_manage_batch_lovs_2024_07_15_11-47-44.log.
+Executing = am_install_tree infodba infodba dba -operation=export -path=C:\GIT\Continuos-Integration\Admin_Data\Backups\ACL\ACL_Backup.xml -format=xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+Access Manager rule tree export terminated successfully
+Executing = am_install_tree infodba infodba dba -operation=import -mode=replace_all  -path=C:\GIT\Continuos-Integration\Admin_Data\ACL\ACL.xml -format=xml
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+Executing = plmxml_import infodba infodba dba -xml_file=C:\GIT\Continuos-Integration\Admin_Data\Workflows\Workflows.xml -transfermode=workflow_template_overwrite -ignore_originid -log=C:\GIT\Continuos-Integration\Admin_Data\Backups\Workflows\Workflows_WorkFlow_Import.log
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+The option infodba is incorrect or not supported. 
+ERROR: (D:/workdir/tc142w1110_64/src/core/pie/CommonPlmxmlImportDriver.cxx:180)
+Syslog File Name: C:\Users\infodba\Siemens\logs\Teamcenter\ITKs\plmxml_import1ad4bc74.syslog
+Executing = plmxml_export infodba infodba dba -xml_file=C:\GIT\Continuos-Integration\Admin_Data\Backups\RevisionRules\Revision_Rule_Backup.xml -log=C:\GIT\Continuos-Integration\Admin_Data\Backups\RevisionRules\Revision_Rule_ExportBackup.log -class=RevisionRule
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+The option infodba is incorrect or not supported. 
+ERROR: (D:/workdir/tc142w1110_64/src/core/main/plmxml_export_itk_main.cxx:246)
+Syslog File Name: C:\Users\infodba\Siemens\logs\Teamcenter\ITKs\plmxml_export34ccd29d.syslog
+Executing = plmxml_import infodba infodba dba -xml_file=C:\GIT\Continuos-Integration\Admin_Data\RevisionRules\Revision_rule.xml -type=RevisionRule -log=C:\GIT\Continuos-Integration\Admin_Data\Backups\RevisionRules\Revision_rule_Revision_Rule_Import.log -import_mode=overwrite
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+The option infodba is incorrect or not supported. 
+ERROR: (D:/workdir/tc142w1110_64/src/core/pie/CommonPlmxmlImportDriver.cxx:180)
+Syslog File Name: C:\Users\infodba\Siemens\logs\Teamcenter\ITKs\plmxml_import3ae81281.syslog
+Executing = plmxml_import infodba infodba dba -xml_file=C:\GIT\Continuos-Integration\Admin_Data\Queries\Queries.xml -type=RevisionRule -log=C:\GIT\Continuos-Integration\Admin_Data\Backups\RevisionRules\Revision_rule_Revision_Rule_Import.log -import_mode=overwrite
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_DATA=C:\Siemens\Teamcenter14\TD 
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>C:\Siemens\Teamcenter14\TD\tc_profilevars
+
+C:\Users\infodba\Documents\Devops_Files\CICD py>SET TC_ROOT=C:\Siemens\Teamcenter14\TR 
+The option infodba is incorrect or not supported. 
+ERROR: (D:/workdir/tc142w1110_64/src/core/pie/CommonPlmxmlImportDriver.cxx:180)
+Syslog File Name: C:\Users\infodba\Siemens\logs\Teamcenter\ITKs\plmxml_import19f0fdaa.syslog
