@@ -58,7 +58,7 @@ extern "C" int RuleHandlerCheckDataset_register_custom_handlers(int* decision, v
 	if (rcode == ITK_ok)
 		fprintf(stdout, "Rule Handler check dataset successfully registered!\n");
 	else
-		fprintf(stdout, "Rule Handler check dataset not registered!\n");
+		fprintf(stdout, "Rule Handler check dataset not registered! \n");
 	return rcode;
 
 }
