@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<TCXML xmlns="http://www.tcxml.org/Schemas/TCXMLSchema" format="low_level">
+<Header author="infodba" date="2024-07-15T07:31:23Z" elemId="id1" originatingSite="-1707403768" targetSite="" version="14.2">
+<TransferFormula elemId="id2">
+<OptionSet elemId="id3" name="AdminDataExportDefault">
+<Option elemId="id4" name="internalClosureRule" value="True">
+</Option>
+<Option elemId="id5" name="opt_admin_data_xfer" value="True">
+</Option>
+<Option elemId="id6" name="opt_exp_orgobj_allprops" value="True">
+</Option>
+<Option elemId="id7" name="opt_skip_proj_members" value="False">
+</Option>
+</OptionSet>
+<SessionOptions elemId="id8">
+<Option elemId="id9" name="fastStream" value="yes">
+</Option>
+<Option elemId="id10" name="forceRetraverse" value="yes">
+</Option>
+<Option elemId="id11" name="adminDataCategory" value="Organization">
+</Option>
+<Option elemId="id12" name="inputCriteria" value="null">
+</Option>
+<Option elemId="id13" name="opt_admin_data_full_scope" value="true">
+</Option>
+<Option elemId="id14" name="candidateKeyDelimiter" value="|">
+</Option>
+<Option elemId="id15" name="opt_admin_data_xml_file_path" value="C:\Users\infodba\Documents\Devops_Files\Backups\export_logs_2024_07_15_13_01_18\Organization\Organization.xml">
+</Option>
+<Option elemId="id16" name="opt_traverse_ref_org" value="True">
+</Option>
+<Option elemId="id17" name="opt_log_file_path" value="C:\Users\infodba\Documents\Devops_Files\Backups\export_logs_2024_07_15_13_01_18\Organization\Organization.log">
+</Option>
+<Option elemId="id18" name="transactionID" value="Mon Jul 15 13:01:23 2024">
+</Option>
+<Option elemId="id19" name="tcxmlArrayDataDelimiter" value=",">
+</Option>
+<Option elemId="id20" name="rootObjs" value="gSCAAAAEpObYAC,QAIAAAA4pObYAC,AkFAAAA4pObYAC,AkIAAAA4pObYAC,QEGAAAA4pObYAC,A8AAAAQwpObYAC,AYOAAAA4pObYAC,AhFAAAA4pObYAC,QZJAAAA4pObYAC,wQBAAAA4pObYAC,wYFAAAA4pObYAC,QhIAAAA4pObYAC,wcFAAAQCpObYAC,A4KAAAA4pObYAC,QBLAAAA4pObYAC,gcIAAAA4pObYAC,gUBAAAA4pObYAC,ApDAAAm4pObYAC,QIBAAAA4pObYAC,gsJAAAA4pObYAC,wACAAAQNpObYAC,QxOAAAA4pObYAC,gFAAAAA4pObYAC,ApJAAAA4pObYAC,AFLAAAm4pObYAC,wyBAAAwmpObYAC,g8KAAAADpObYAC,w0BAAAA4pObYAC,QpFAAAFDpObYAC,wgJAAAA4pObYAC,AFJAAAA4pObYAC,woNAAAA4pObYAC,w8FAAAA4pObYAC,QZFAAAFDpObYAC,AZBAAAA4pObYAC,A1IAAAFDpObYAC,gsNAAAA4pObYAC,wAFAAAA4pObYAC,g4BAAAA4pObYAC,QJFAAAFDpObYAC,Q5MAAAA4pObYAC,ANNAAAA4pObYAC,AhLAAAm4pObYAC">
+</Option>
+</SessionOptions>
+<TransferMode elemId="id21" object_name="AdminDataExportDefaultTM">
+</TransferMode>
+<Reason elemId="id22">
+</Reason>
+</TransferFormula>
+</Header>
+<POM_stub definitive="#id31" elemId="id99" object_class="Group" object_id="" object_type="Group" object_uid="A4KAAAA4pObYAC">
+<GSIdentity elemId="id23" label="system|">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id100" object_class="ImanVolume" object_id="" object_type="ImanVolume" object_uid="A8AAAAQwpObYAC">
+<GSIdentity elemId="id24" label="volume">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id101" object_class="Role" object_id="" object_type="Role" object_uid="AYOAAAA4pObYAC">
+<GSIdentity elemId="id25" label="DBA">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id102" object_class="Role" object_id="" object_type="Role" object_uid="AhFAAAA4pObYAC">
+<GSIdentity elemId="id26" label="Designer">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id103" object_class="User" object_id="" object_type="User" object_uid="AhLAAAm4pObYAC">
+<GSIdentity elemId="id27" label="dcproxy">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id104" object_class="Person" object_id="" object_type="Person" object_uid="AkFAAAA4pObYAC">
+<GSIdentity elemId="id28" label="infodba">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id105" object_class="Group" object_id="" object_type="Group" object_uid="AkIAAAA4pObYAC">
+<GSIdentity elemId="id29" label="dba|">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id106" object_class="User" object_id="" object_type="User" object_uid="QAIAAAA4pObYAC">
+<GSIdentity elemId="id30" label="infodba">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id107" object_class="POM_imc" object_id="" object_type="POM_imc" object_uid="gSCAAAAEpObYAC">
+<GSIdentity elemId="id31" label="-1707403768">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id108" object_class="Role" object_id="" object_type="Role" object_uid="gUBAAAA4pObYAC">
+<GSIdentity elemId="id32" label="Project Administrator">
+</GSIdentity>
+</POM_stub>
+<POM_stub definitive="#id31" elemId="id109" object_class="Group" object_id="" object_type="Group" object_uid="gcIAAAA4pObYAC">
+<GSIdentity elemId="id33" label="Project Administration|">
+</GSIdentity>
+</POM_stub>
+<Role L10N_role_name="en_US:M:M:0000:                                :Class Librarian" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2024-01-17T08:36:25Z" data_source="0" description="Class Librarian" elemId="id110" island_id="161" last_mod_date="2024-01-17T08:36:25Z" last_mod_user="#id30" lsd="2024-01-17T08:36:25Z" object_properties="0" owning_group="#id29" owning_user="#id30" parent_uid="" pid="437" puid="QpFAAAFDpObYAC" role_name="Class Librarian" timestamp="QpNAAAFDpObYAC">
+<GSIdentity elemId="id34" label="Class Librarian">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id111" island_id="161" lsd="2024-01-17T08:36:25Z" object_properties="0" parent_uid="QpFAAAFDpObYAC" pid="438" puid="QpHAAAFDpObYAC" role_ref="#id34" timestamp="QpLAAAFDpObYAC">
+<GSIdentity elemId="id35" label="Class Librarian">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Operator" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2024-01-17T08:36:25Z" data_source="0" description="" elemId="id112" island_id="160" last_mod_date="2024-01-17T08:36:25Z" last_mod_user="#id30" lsd="2024-01-17T08:36:25Z" object_properties="0" owning_group="#id29" owning_user="#id30" parent_uid="" pid="437" puid="QZFAAAFDpObYAC" role_name="Operator" timestamp="QZNAAAFDpObYAC">
+<GSIdentity elemId="id36" label="Operator">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id113" island_id="160" lsd="2024-01-17T08:36:25Z" object_properties="0" parent_uid="QZFAAAFDpObYAC" pid="438" puid="QZHAAAFDpObYAC" role_ref="#id36" timestamp="QZLAAAFDpObYAC">
+<GSIdentity elemId="id37" label="Operator">
+</GSIdentity>
+</RoleInOwningGroup>
+<RoleInOwningGroup elemId="id114" island_id="159" lsd="2024-01-17T08:36:25Z" object_properties="0" parent_uid="QJFAAAFDpObYAC" pid="438" puid="QJHAAAFDpObYAC" role_ref="#id39" timestamp="QJLAAAFDpObYAC">
+<GSIdentity elemId="id38" label="Senior Planner">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Senior Planner" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2024-01-17T08:36:25Z" data_source="0" description="Senior Planner" elemId="id115" island_id="159" last_mod_date="2024-01-17T08:36:25Z" last_mod_user="#id30" lsd="2024-01-17T08:36:25Z" object_properties="0" owning_group="#id29" owning_user="#id30" parent_uid="" pid="437" puid="QJFAAAFDpObYAC" role_name="Senior Planner" timestamp="QJNAAAFDpObYAC">
+<GSIdentity elemId="id39" label="Senior Planner">
+</GSIdentity>
+</Role>
+<Role L10N_role_name="en_US:M:M:0000:                                :Planner" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2024-01-17T08:36:24Z" data_source="0" description="" elemId="id116" island_id="158" last_mod_date="2024-01-17T08:36:24Z" last_mod_user="#id30" lsd="2024-01-17T08:36:24Z" object_properties="0" owning_group="#id29" owning_user="#id30" parent_uid="" pid="437" puid="A1IAAAFDpObYAC" role_name="Planner" timestamp="A5AAAAFDpObYAC">
+<GSIdentity elemId="id40" label="Planner">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id117" island_id="158" lsd="2024-01-17T08:36:24Z" object_properties="0" parent_uid="A1IAAAFDpObYAC" pid="438" puid="A1KAAAFDpObYAC" role_ref="#id40" timestamp="A1OAAAFDpObYAC">
+<GSIdentity elemId="id41" label="Planner">
+</GSIdentity>
+</RoleInOwningGroup>
+<Group L10N_name="en_US:M:M:0000:                                :Engineering,fr_FR:S:A:0000:                                :Engineering,de_DE:S:A:0000:                                :Konstruktion,it_IT:S:A:0000:                                :Progettazione,es_ES:S:A:0000:                                :Ingeniería,pt_BR:S:A:0000:                                :Engenharia" description="" elemId="id118" group_data_source="0" island_id="157" list_of_discipline="" list_of_role="#id26" local_volume="" lsd="2023-12-11T03:29:18Z" name="Engineering" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="QBLAAAA4pObYAC" security="" timestamp="wAAAAAQNpObYAC" volume="#id24">
+<GSIdentity elemId="id42" label="Engineering|">
+</GSIdentity>
+</Group>
+<GroupMember default_role="N" elemId="id119" ga="Y" group="#id33" island_id="156" lsd="2023-12-11T02:41:41Z" membership_data_source="0" object_properties="0" parent_uid="" pid="650" puid="gsJAAAA4pObYAC" role="#id32" status="N" timestamp="gsMAAAA4pObYAC" user="#id30">
+<GSIdentity elemId="id43" label="infodba|Project Administration||Project Administrator">
+</GSIdentity>
+</GroupMember>
+<GroupMember default_role="N" elemId="id120" ga="Y" group="#id23" island_id="155" lsd="2023-12-11T02:41:39Z" membership_data_source="0" object_properties="0" parent_uid="" pid="650" puid="QIBAAAA4pObYAC" role="" status="N" timestamp="QIFAAAA4pObYAC" user="#id30">
+<GSIdentity elemId="id44" label="infodba|system||">
+</GSIdentity>
+</GroupMember>
+<GroupMember default_role="N" elemId="id121" ga="N" group="#id29" island_id="154" lsd="2024-02-07T06:33:26Z" membership_data_source="0" object_properties="0" parent_uid="" pid="650" puid="ApDAAAm4pObYAC" role="#id26" status="N" timestamp="ApMAAAm4pObYAC" user="#id27">
+<GSIdentity elemId="id45" label="dcproxy|dba||Designer">
+</GSIdentity>
+</GroupMember>
+<GroupMember default_role="N" elemId="id122" ga="N" group="#id42" island_id="153" lsd="2023-12-11T03:29:18Z" membership_data_source="0" object_properties="0" parent_uid="" pid="650" puid="wACAAAQNpObYAC" role="#id26" status="N" timestamp="wAEAAAQNpObYAC" user="#id30">
+<GSIdentity elemId="id46" label="infodba|Engineering||Designer">
+</GSIdentity>
+</GroupMember>
+<GroupMember default_role="N" elemId="id123" ga="N" group="#id29" island_id="152" lsd="2023-12-11T02:41:39Z" membership_data_source="0" object_properties="0" parent_uid="" pid="650" puid="QEGAAAA4pObYAC" role="#id25" status="N" timestamp="QEJAAAA4pObYAC" user="#id30">
+<GSIdentity elemId="id47" label="infodba|dba||DBA">
+</GSIdentity>
+</GroupMember>
+<User def_acl="0" default_group="#id29" elemId="id124" fnd0LoginLicenseLevel="5" fnd0Sponsorable="0" fnd0UserDeclaredGeography="" fnd0VISLicenseLevel="0" fnd0custom_user_profile="" fnd0remote_sites_deny_login="" geography="" gov_clearance="" ip_clearance="" island_id="151" last_login_time="2024-07-15T07:31:20Z" license_level="5" local_volume="" lsd="2024-07-15T07:31:20Z" nationality="" newpassword="$2a$07$LRjjLh.1W0O0Kxi3KUGxKu8DarHl.6FvLwy6CnE7nBIZEjbS4Hh1y" object_properties="0" os_username="infodba" parent_uid="" password="659610192aaa3429" person="#id28" pid="1003" puid="QAIAAAA4pObYAC" status="0" timestamp="gMFAAcaQpObYAC" ttc_date="" user_data_source="0" user_id="infodba" user_name="infodba" volume="">
+<GSIdentity elemId="id48" label="infodba">
+</GSIdentity>
+</User>
+<RoleInOwningGroup elemId="id125" island_id="101" lsd="2023-12-11T02:41:41Z" object_properties="0" parent_uid="gUBAAAA4pObYAC" pid="438" puid="gUDAAAA4pObYAC" role_ref="#id50" timestamp="gUHAAAA4pObYAC">
+<GSIdentity elemId="id49" label="Project Administrator">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Project Administrator,fr_FR:S:A:0000:                                :Administrateur de projet,de_DE:S:A:0000:                                :Projektadministrator,it_IT:S:A:0000:                                :Amministratore progetto,es_ES:S:A:0000:                                :Administrador de Proyecto,pt_BR:S:A:0000:                                :Administrador do projeto" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:41Z" data_source="0" description="Project Administrator" elemId="id126" island_id="101" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="gUBAAAA4pObYAC" role_name="Project Administrator" timestamp="QXAAAAANpObYAC">
+<GSIdentity elemId="id50" label="Project Administrator">
+</GSIdentity>
+</Role>
+<Role L10N_role_name="en_US:M:M:0000:                                :Simulation Administrator,fr_FR:S:A:0000:                                :Administrateur de Simulation,de_DE:S:A:0000:                                :Simulations-Administrator,it_IT:S:A:0000:                                :Amministratore simulazione,es_ES:S:A:0000:                                :Administrador de Simulación,pt_BR:S:A:0000:                                :Administrador de simulações" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Simulation Administrator" elemId="id127" island_id="100" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="Q5MAAAA4pObYAC" role_name="Simulation Administrator" timestamp="QXOAAAANpObYAC">
+<GSIdentity elemId="id51" label="Simulation Administrator">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id128" island_id="100" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="Q5MAAAA4pObYAC" pid="438" puid="Q5OAAAA4pObYAC" role_ref="#id51" timestamp="Q9CAAAA4pObYAC">
+<GSIdentity elemId="id52" label="Simulation Administrator">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Sponsorer" elemId="id129" island_id="99" last_mod_date="2023-12-11T02:41:42Z" last_mod_user="#id48" lsd="2023-12-11T02:41:42Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="QhIAAAA4pObYAC" role_name="Sponsorer" timestamp="QlAAAAA4pObYAC">
+<GSIdentity elemId="id53" label="Sponsorer">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id130" island_id="99" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="QhIAAAA4pObYAC" pid="438" puid="QhKAAAA4pObYAC" role_ref="#id53" timestamp="QhOAAAA4pObYAC">
+<GSIdentity elemId="id54" label="Sponsorer">
+</GSIdentity>
+</RoleInOwningGroup>
+<RoleInOwningGroup elemId="id131" island_id="98" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="AhFAAAA4pObYAC" pid="438" puid="AhHAAAA4pObYAC" role_ref="#id56" timestamp="AhLAAAA4pObYAC">
+<GSIdentity elemId="id55" label="Designer">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Designer,fr_FR:S:A:0000:                                :Concepteur,de_DE:S:A:0000:                                :Konstrukteur,it_IT:S:A:0000:                                :Progettista,es_ES:S:A:0000:                                :Diseñador,pt_BR:S:A:0000:                                :Designer" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Designer" elemId="id132" island_id="98" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="AhFAAAA4pObYAC" role_name="Designer" timestamp="QXNAAAANpObYAC">
+<GSIdentity elemId="id56" label="Designer">
+</GSIdentity>
+</Role>
+<Role L10N_role_name="en_US:M:M:0000:                                :Override Approver,fr_FR:S:A:0000:                                :Approbateur de remplacement,de_DE:S:A:0000:                                :Überschreibungs-Genehmiger,it_IT:S:A:0000:                                :Approvazione ridefinizione,es_ES:S:A:0000:                                :Aprobador de sustitución,pt_BR:S:A:0000:                                :Aprovador de substituições" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Override Approver" elemId="id133" island_id="97" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="AZBAAAA4pObYAC" role_name="Override Approver" timestamp="QXMAAAANpObYAC">
+<GSIdentity elemId="id57" label="Override Approver">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id134" island_id="97" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="AZBAAAA4pObYAC" pid="438" puid="AZDAAAA4pObYAC" role_ref="#id57" timestamp="AZHAAAA4pObYAC">
+<GSIdentity elemId="id58" label="Override Approver">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Validation Administrator,fr_FR:S:A:0000:                                :Administrateur de validation,de_DE:S:A:0000:                                :Prüfungsadministrator,it_IT:S:A:0000:                                :Amministratore convalida,es_ES:S:A:0000:                                :Administrador de Validación,pt_BR:S:A:0000:                                :Administrador de validação" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Validation Administrator" elemId="id135" island_id="96" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="ANNAAAA4pObYAC" role_name="Validation Administrator" timestamp="QXLAAAANpObYAC">
+<GSIdentity elemId="id59" label="Validation Administrator">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id136" island_id="96" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="ANNAAAA4pObYAC" pid="438" puid="ANPAAAA4pObYAC" role_ref="#id59" timestamp="ARDAAAA4pObYAC">
+<GSIdentity elemId="id60" label="Validation Administrator">
+</GSIdentity>
+</RoleInOwningGroup>
+<RoleInOwningGroup elemId="id137" island_id="94" lsd="2023-12-11T02:41:39Z" object_properties="0" parent_uid="AYOAAAA4pObYAC" pid="438" puid="AcAAAAA4pObYAC" role_ref="#id62" timestamp="AcEAAAA4pObYAC">
+<GSIdentity elemId="id61" label="DBA">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :DBA,fr_FR:S:A:0000:                                :DBA,de_DE:S:A:0000:                                :DBA,it_IT:S:A:0000:                                :DBA,es_ES:S:A:0000:                                :DBA,pt_BR:S:A:0000:                                :DBA" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:39Z" data_source="0" description="Database Administrator." elemId="id138" island_id="94" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id29" owning_user="#id48" parent_uid="" pid="437" puid="AYOAAAA4pObYAC" role_name="DBA" timestamp="QTPAAAANpObYAC">
+<GSIdentity elemId="id62" label="DBA">
+</GSIdentity>
+</Role>
+<Group L10N_name="en_US:M:M:0000:                                :dba,fr_FR:S:A:0000:                                :dba,de_DE:S:A:0000:                                :dba,it_IT:S:A:0000:                                :dba,es_ES:S:A:0000:                                :dba,pt_BR:S:A:0000:                                :dba" description="DataBase Administrator group." elemId="id139" group_data_source="0" island_id="93" list_of_discipline="" list_of_role="#id62,#id56" local_volume="" lsd="2024-02-07T06:33:26Z" name="dba" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="1" puid="AkIAAAA4pObYAC" security="" timestamp="AhFAAAm4pObYAC" volume="#id24">
+<GSIdentity elemId="id63" label="dba|">
+</GSIdentity>
+</Group>
+<Person PA1="" PA10="" PA2="" PA3="" PA4="" PA5="" PA6="" PA7="" PA8="" PA9="" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:39Z" data_source="0" elemId="id140" form_name="" island_id="68" last_mod_date="2023-12-11T02:41:40Z" last_mod_user="#id48" locale="" lsd="2023-12-11T02:41:40Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="407" puid="AkFAAAA4pObYAC" timestamp="QcJAAAA4pObYAC" timezone="" user_name="infodba">
+<GSIdentity elemId="id64" label="infodba">
+</GSIdentity>
+</Person>
+<Person PA1="" PA10="" PA2="" PA3="" PA4="" PA5="" PA6="" PA7="" PA8="" PA9="" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2024-02-07T06:33:26Z" data_source="0" elemId="id141" form_name="" island_id="67" last_mod_date="2024-02-07T06:33:26Z" last_mod_user="#id48" locale="" lsd="2024-02-07T06:33:26Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="407" puid="AFLAAAm4pObYAC" timestamp="AVPAAAm4pObYAC" timezone="" user_name="dcproxy">
+<GSIdentity elemId="id65" label="dcproxy">
+</GSIdentity>
+</Person>
+<ImanVolume acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T03:07:26Z" elemId="id142" island_id="66" last_mod_date="2023-12-11T03:29:18Z" last_mod_user="#id48" lsd="2023-12-11T03:29:18Z" machine_type="0" node_name="VMTC" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="277" protection_mode="969" puid="A8AAAAQwpObYAC" shadow_node_name="" shadow_unix_path_name="" shadow_vms_path_name="" shadow_wnt_path_name="" timestamp="g4MAAAQNpObYAC" unix_path_name="" user_paths="dba_65767cf0,engineering_6576820e" users="#id63,#id42" vms_path_name="" volume_name="volume" wnt_path_name="C:\Siemens\Teamcenter14\volume">
+<GSIdentity elemId="id66" label="volume">
+</GSIdentity>
+</ImanVolume>
+<Group L10N_name="en_US:M:M:0000:                                :Next Generation Planner" description="" elemId="id143" group_data_source="0" island_id="62" list_of_discipline="" list_of_role="#id40,#id39,#id36,#id34" local_volume="" lsd="2024-01-17T08:36:25Z" name="Next Generation Planner" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="#id42" parent_uid="" pid="649" privilege="0" puid="QBHAAAFDpObYAC" security="" timestamp="gBNAAAFDpObYAC" volume="">
+<GSIdentity elemId="id67" label="Next Generation Planner|Engineering|">
+</GSIdentity>
+</Group>
+<User def_acl="0" default_group="#id63" elemId="id144" fnd0LoginLicenseLevel="" fnd0Sponsorable="0" fnd0UserDeclaredGeography="" fnd0VISLicenseLevel="0" fnd0custom_user_profile="" fnd0remote_sites_deny_login="" geography="" gov_clearance="" ip_clearance="" island_id="57" last_login_time="" license_level="5" local_volume="" lsd="2024-02-07T06:33:26Z" nationality="" newpassword="$2a$07$K0WuKxXhXUCyMEG0KB.zK.0Pf8ryVqpmuZf0DhWhtlUns5zfjTPwq" object_properties="0" os_username="dcproxy" parent_uid="" password="b6d274a7f2a3eada" person="#id65" pid="1003" puid="AhLAAAm4pObYAC" status="0" timestamp="A9OAAAm4pObYAC" ttc_date="" user_data_source="0" user_id="dcproxy" user_name="dcproxy" volume="">
+<GSIdentity elemId="id68" label="dcproxy">
+</GSIdentity>
+</User>
+<Fnd0LicenseServer acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T03:38:49Z" elemId="id145" fnd0FailoverLicenseServers="" fnd0LicenseServerType="NULS" fnd0MultipleLicenseServers="" fnd0host_name="VMTC" fnd0license_port="28000" fnd0name="Default Local License Server" fnd0protocol="0" fnd0site="#id31" island_id="56" last_mod_date="2023-12-11T03:38:49Z" last_mod_user="#id48" lsd="2023-12-11T03:38:49Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="201" puid="wcFAAAQCpObYAC" timestamp="wcHAAAQCpObYAC">
+<GSIdentity elemId="id69" label="Default Local License Server">
+</GSIdentity>
+</Fnd0LicenseServer>
+<Group L10N_name="en_US:M:M:0000:                                :Project Administration,fr_FR:S:A:0000:                                :Administration de projet,de_DE:S:A:0000:                                :Projektadministration,it_IT:S:A:0000:                                :Amministrazione progetto,es_ES:S:A:0000:                                :Administración de Proyectos,pt_BR:S:A:0000:                                :Administração de projeto" description="Project Administration" elemId="id146" group_data_source="0" island_id="48" list_of_discipline="" list_of_role="#id50" local_volume="" lsd="2023-12-11T03:28:50Z" name="Project Administration" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="gcIAAAA4pObYAC" security="" timestamp="A7OAAAANpObYAC" volume="">
+<GSIdentity elemId="id70" label="Project Administration|">
+</GSIdentity>
+</Group>
+<Group L10N_name="en_US:M:M:0000:                                :system,fr_FR:S:A:0000:                                :system,de_DE:S:A:0000:                                :System,it_IT:S:A:0000:                                :system,es_ES:S:A:0000:                                :sistema,pt_BR:S:A:0000:                                :sistema" description="System Utilities group." elemId="id147" group_data_source="0" island_id="47" list_of_discipline="" list_of_role="" local_volume="" lsd="2023-12-11T03:28:50Z" name="system" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="A4KAAAA4pObYAC" security="" timestamp="A7NAAAANpObYAC" volume="">
+<GSIdentity elemId="id71" label="system|">
+</GSIdentity>
+</Group>
+<POM_imc connect_string="" dbms="1" elemId="id148" island_id="44" lsd="2023-12-11T02:40:13Z" name="IMC--1707403768" object_properties="0" parent_uid="" password="" pid="22" puid="gSCAAAAEpObYAC" site_id="-1707403768" timestamp="gSEAAAAEpObYAC" user_id="">
+<GSIdentity elemId="id72" label="-1707403768">
+</GSIdentity>
+</POM_imc>
+<Role L10N_role_name="en_US:M:M:0000:                                :Project Team Administrator,fr_FR:S:A:0000:                                :Admin d'équipe de projet,de_DE:S:A:0000:                                :Projektteamadministrator,it_IT:S:A:0000:                                :Amministratore team di progetto,es_ES:S:A:0000:                                :Administrador Equipo de Proyecto,pt_BR:S:A:0000:                                :Administrador equipe do projeto" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:41Z" data_source="0" description="Project Team Administrator" elemId="id149" island_id="39" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="g4BAAAA4pObYAC" role_name="Project Team Administrator" timestamp="QXCAAAANpObYAC">
+<GSIdentity elemId="id73" label="Project Team Administrator">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id150" island_id="39" lsd="2023-12-11T02:41:41Z" object_properties="0" parent_uid="g4BAAAA4pObYAC" pid="438" puid="g4DAAAA4pObYAC" role_ref="#id73" timestamp="g4HAAAA4pObYAC">
+<GSIdentity elemId="id74" label="Project Team Administrator">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Project Member,fr_FR:S:A:0000:                                :Membre du projet,de_DE:S:A:0000:                                :Projektmitglied,it_IT:S:A:0000:                                :Componente progetto,es_ES:S:A:0000:                                :Miembro de Proyecto,pt_BR:S:A:0000:                                :Membro do projeto" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:41Z" data_source="0" description="Project Member" elemId="id151" island_id="38" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="wAFAAAA4pObYAC" role_name="Project Member" timestamp="QXDAAAANpObYAC">
+<GSIdentity elemId="id75" label="Project Member">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id152" island_id="38" lsd="2023-12-11T02:41:41Z" object_properties="0" parent_uid="wAFAAAA4pObYAC" pid="438" puid="wAHAAAA4pObYAC" role_ref="#id75" timestamp="wALAAAA4pObYAC">
+<GSIdentity elemId="id76" label="Project Member">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Project Author,fr_FR:S:A:0000:                                :Auteur du projet,de_DE:S:A:0000:                                :Projektautor,it_IT:S:A:0000:                                :Autore progetto,es_ES:S:A:0000:                                :Autor de Proyecto,pt_BR:S:A:0000:                                :Autor do projeto" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:41Z" data_source="0" description="Project Author" elemId="id153" island_id="37" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="gsNAAAA4pObYAC" role_name="Project Author" timestamp="QXBAAAANpObYAC">
+<GSIdentity elemId="id77" label="Project Author">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id154" island_id="37" lsd="2023-12-11T02:41:41Z" object_properties="0" parent_uid="gsNAAAA4pObYAC" pid="438" puid="gsPAAAA4pObYAC" role_ref="#id77" timestamp="gwDAAAA4pObYAC">
+<GSIdentity elemId="id78" label="Project Author">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :ITAR Classifier,fr_FR:S:A:0000:                                :Classificateur ITAR,de_DE:S:A:0000:                                :ITAR-Klassifizierer,it_IT:S:A:0000:                                :Classificatore ITAR,es_ES:S:A:0000:                                :Clasificador de ITAR,pt_BR:S:A:0000:                                :Classificador de ITAR" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="ITAR Classifier" elemId="id155" island_id="33" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="w8FAAAA4pObYAC" role_name="ITAR Classifier" timestamp="QXJAAAANpObYAC">
+<GSIdentity elemId="id79" label="ITAR Classifier">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id156" island_id="33" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="w8FAAAA4pObYAC" pid="438" puid="w8HAAAA4pObYAC" role_ref="#id79" timestamp="w8LAAAA4pObYAC">
+<GSIdentity elemId="id80" label="ITAR Classifier">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :ITAR Admin,fr_FR:S:A:0000:                                :Admin ITAR,de_DE:S:A:0000:                                :ITAR-Verwaltung,it_IT:S:A:0000:                                :Ammin. ITAR,es_ES:S:A:0000:                                :Administrador de ITAR,pt_BR:S:A:0000:                                :Administrador do ITAR" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="ITAR Admin" elemId="id157" island_id="32" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="woNAAAA4pObYAC" role_name="ITAR Admin" timestamp="QXHAAAANpObYAC">
+<GSIdentity elemId="id81" label="ITAR Admin">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id158" island_id="32" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="woNAAAA4pObYAC" pid="438" puid="woPAAAA4pObYAC" role_ref="#id81" timestamp="wsDAAAA4pObYAC">
+<GSIdentity elemId="id82" label="ITAR Admin">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :IP Classifier,fr_FR:S:A:0000:                                :Classificateur IP,de_DE:S:A:0000:                                :IP-Klassifizierer,it_IT:S:A:0000:                                :Classificatore IP,es_ES:S:A:0000:                                :Clasificador de IP,pt_BR:S:A:0000:                                :Classificador de IP" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="IP Classifier" elemId="id159" island_id="31" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="AFJAAAA4pObYAC" role_name="IP Classifier" timestamp="QXKAAAANpObYAC">
+<GSIdentity elemId="id83" label="IP Classifier">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id160" island_id="31" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="AFJAAAA4pObYAC" pid="438" puid="AFLAAAA4pObYAC" role_ref="#id83" timestamp="AFPAAAA4pObYAC">
+<GSIdentity elemId="id84" label="IP Classifier">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :IP Admin,fr_FR:S:A:0000:                                :Admin IP,de_DE:S:A:0000:                                :IP-Verwaltung,it_IT:S:A:0000:                                :Ammin. IP,es_ES:S:A:0000:                                :Administrador de IP,pt_BR:S:A:0000:                                :Administrador do IP" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="IP Admin" elemId="id161" island_id="30" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="wgJAAAA4pObYAC" role_name="IP Admin" timestamp="QXGAAAANpObYAC">
+<GSIdentity elemId="id85" label="IP Admin">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id162" island_id="30" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="wgJAAAA4pObYAC" pid="438" puid="wgLAAAA4pObYAC" role_ref="#id85" timestamp="wgPAAAA4pObYAC">
+<GSIdentity elemId="id86" label="IP Admin">
+</GSIdentity>
+</RoleInOwningGroup>
+<RoleInOwningGroup elemId="id163" island_id="28" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="w0BAAAA4pObYAC" pid="438" puid="w0DAAAA4pObYAC" role_ref="#id88" timestamp="w0HAAAA4pObYAC">
+<GSIdentity elemId="id87" label="ADA Site Admin">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :ADA Site Admin,fr_FR:S:A:0000:                                :Admin de site ADA,de_DE:S:A:0000:                                :ADA-Standortverwaltung,it_IT:S:A:0000:                                :Ammin. sito ADA,es_ES:S:A:0000:                                :Administrador del sitio ADA,pt_BR:S:A:0000:                                :Administrador do site ADA" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="ADA Site Admin" elemId="id164" island_id="28" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="w0BAAAA4pObYAC" role_name="ADA Site Admin" timestamp="QXIAAAANpObYAC">
+<GSIdentity elemId="id88" label="ADA Site Admin">
+</GSIdentity>
+</Role>
+<POM_imc connect_string="" dbms="0" elemId="id165" island_id="27" lsd="2023-12-16T15:50:56Z" name="AWS_FullTextSearch_Solr_Site" object_properties="0" parent_uid="" password="matic" pid="22" puid="g8KAAAADpObYAC" site_id="-1706924322" timestamp="wABAAAADpObYAC" user_id="otto">
+<GSIdentity elemId="id89" label="-1706924322">
+</GSIdentity>
+</POM_imc>
+<POM_imc connect_string="vc6s012" dbms="0" elemId="id166" island_id="26" lsd="2023-12-16T15:49:59Z" name="IMC--1762632385" object_properties="0" parent_uid="" password="matic" pid="22" puid="wyBAAAwmpObYAC" site_id="-1762632385" timestamp="wyIAAAwmpObYAC" user_id="otto">
+<GSIdentity elemId="id90" label="-1762632385">
+</GSIdentity>
+</POM_imc>
+<Group L10N_name="en_US:M:M:0000:                                :Validation Administration,fr_FR:S:A:0000:                                :Administration de validation,de_DE:S:A:0000:                                :Prüfungsadministration,it_IT:S:A:0000:                                :Amministrazione convalida,es_ES:S:A:0000:                                :Administración de Validación,pt_BR:S:A:0000:                                :Administração de validação" description="Validation Administration." elemId="id167" group_data_source="0" island_id="24" list_of_discipline="" list_of_role="#id59,#id57" local_volume="" lsd="2023-12-11T03:28:50Z" name="Validation Administration" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="ApJAAAA4pObYAC" security="" timestamp="A7PAAAANpObYAC" volume="">
+<GSIdentity elemId="id91" label="Validation Administration|">
+</GSIdentity>
+</Group>
+<Group L10N_name="en_US:M:M:0000:                                :Simulation Administration,fr_FR:S:A:0000:                                :Administration de Simulation,de_DE:S:A:0000:                                :Simulations-Administration,it_IT:S:A:0000:                                :Amministrazione simulazione,es_ES:S:A:0000:                                :Administración de Simulación,pt_BR:S:A:0000:                                :Administração de simulação" description="Simulation Administration" elemId="id168" group_data_source="0" island_id="23" list_of_discipline="" list_of_role="#id51" local_volume="" lsd="2023-12-11T03:28:50Z" name="Simulation Administration" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="gFAAAAA4pObYAC" security="" timestamp="A$BAAAANpObYAC" volume="">
+<GSIdentity elemId="id92" label="Simulation Administration|">
+</GSIdentity>
+</Group>
+<Group L10N_name="" description="BIW Planner." elemId="id169" group_data_source="0" island_id="22" list_of_discipline="" list_of_role="" local_volume="" lsd="2023-12-11T02:41:42Z" name="BIW_Planner" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="QxOAAAA4pObYAC" security="" timestamp="Q1AAAAA4pObYAC" volume="">
+<GSIdentity elemId="id93" label="BIW_Planner|">
+</GSIdentity>
+</Group>
+<Role L10N_role_name="en_US:M:M:0000:                                :CostDBA,fr_FR:S:A:0000:                                :CostDBA,de_DE:S:A:0000:                                :Kosten-DBA,it_IT:S:A:0000:                                :CostDBA,es_ES:S:A:0000:                                :Administrador de Costes,pt_BR:S:A:0000:                                :DBA de custos" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="CostDBA" elemId="id170" island_id="11" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="wYFAAAA4pObYAC" role_name="CostDBA" timestamp="QXFAAAANpObYAC">
+<GSIdentity elemId="id94" label="CostDBA">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id171" island_id="11" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="wYFAAAA4pObYAC" pid="438" puid="wYHAAAA4pObYAC" role_ref="#id94" timestamp="wYLAAAA4pObYAC">
+<GSIdentity elemId="id95" label="CostDBA">
+</GSIdentity>
+</RoleInOwningGroup>
+<Role L10N_role_name="en_US:M:M:0000:                                :Resource Graph Viewers,fr_FR:S:A:0000:                                :Afficheurs de Graphiques des res,de_DE:S:A:0000:                                :Ressourcengraphen-Viewer,it_IT:S:A:0000:                                :Visualizzatori grafico risorse,es_ES:S:A:0000:                                :Visualizadores gráf de recursos,pt_BR:S:A:0000:                                :Visualizadores recurso gráfico" acl_bits="0" archive_date="" archive_info="" backup_date="" creation_date="2023-12-11T02:41:42Z" data_source="0" description="Resource Graph Viewers" elemId="id172" island_id="10" last_mod_date="2023-12-11T03:28:50Z" last_mod_user="#id48" lsd="2023-12-11T03:28:50Z" object_properties="0" owning_group="#id63" owning_user="#id48" parent_uid="" pid="437" puid="wQBAAAA4pObYAC" role_name="Resource Graph Viewers" timestamp="QXEAAAANpObYAC">
+<GSIdentity elemId="id96" label="Resource Graph Viewers">
+</GSIdentity>
+</Role>
+<RoleInOwningGroup elemId="id173" island_id="10" lsd="2023-12-11T02:41:42Z" object_properties="0" parent_uid="wQBAAAA4pObYAC" pid="438" puid="wQDAAAA4pObYAC" role_ref="#id96" timestamp="wQHAAAA4pObYAC">
+<GSIdentity elemId="id97" label="Resource Graph Viewers">
+</GSIdentity>
+</RoleInOwningGroup>
+<Group L10N_name="" description="Sponsor" elemId="id174" group_data_source="0" island_id="9" list_of_discipline="" list_of_role="#id53" local_volume="" lsd="2023-12-11T02:41:42Z" name="Sponsor" nationality="" object_properties="0" operational_status="" organization_address="" organization_alternate_name="" organization_id="" organization_legal_name="" organization_name="" organization_type="" organization_url="" parent="" parent_uid="" pid="649" privilege="0" puid="QZJAAAA4pObYAC" security="" timestamp="QxKAAAA4pObYAC" volume="">
+<GSIdentity elemId="id98" label="Sponsor|">
+</GSIdentity>
+</Group>
+</TCXML>

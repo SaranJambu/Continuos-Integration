@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<preferences version="10.0">
+  <category name="Active Workspace Search">
+    <category_description>Active Workspace Search preferences</category_description>
+    <preference name="AWC_Rev_Rule_Selected" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifiess the revision rule selected by the user in Active Workspace. Make sure this preference is deleted if the first value of &quot;AWC_Rev_Rule_List&quot; preference has to be selected in AWC Client. Add a valid value to this preference if a specific revision rule in the list has to be selected. If the &quot;AWC_Rev_Rule_List&quot; preference is modified to remove the value matching the AWC_Rev_Rule_Selected value, delete this preference.&quot;</preference_description>
+      <context name="Teamcenter">
+        <value>Latest Working</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Active Workspace.BOM">
+    <category_description>Active Workspace BOM specific preferences.</category_description>
+    <preference name="AWB_ShowMarkup" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This preference is set to true if markup mode is selected. It is false by default.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Column Preferences">
+    <category_description>No description available for this category.</category_description>
+    <preference name="QRYColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines the queries available for selection from the Find menu in both the rich client and the thin client.
+Valid Values:
+Valid Teamcenter query classes.</preference_description>
+      <context name="Teamcenter">
+        <value>Item...</value>
+        <value>Item Revision...</value>
+        <value>Remote...</value>
+        <value>Checked-Out Dataset...</value>
+      </context>
+    </preference>
+  </category>
+  <category name="General">
+    <category_description>No description available for this category.</category_description>
+    <preference name="AWC_LastUsed_Workspace" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Devops</value>
+      </context>
+    </preference>
+    <preference name="AWS_SearchPreFilter_Property2_SelectedValue" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Work Packages</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_AdvancedSearchSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>TableView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_Generic_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_OccurrenceManagementSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>TreeSummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_SavedSearchSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_SearchResultsSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_allChangesSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_favoritesSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_myProjectListSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="AW_SubLocation_myTasksSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>SummaryView</value>
+      </context>
+    </preference>
+    <preference name="BOMSupersedure_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>CMAdds</value>
+        <value>CMCancels</value>
+      </context>
+    </preference>
+    <preference name="Create_WORKSPACE_OBJECT_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Item</value>
+      </context>
+    </preference>
+    <preference name="Default_Quick_Access_Query" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines the default quick search internal name.
+Valid Values:
+Any valid internal search name.</preference_description>
+      <context name="Teamcenter">
+        <value>Item Revision...</value>
+      </context>
+    </preference>
+    <preference name="LHN_Applications_List" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines the applications displayed in the Left Hand Navigation (LHN) pane.
+The format of values for this preference is &quot;perspectiveId:DisplayMode&quot;.
+For example, for setting the &quot;My Teamcenter&quot; perspective as primary and the &quot;Getting Started&quot; perspective as secondary, the preference values would be:
+com.teamcenter.rac.ui.perspectives.navigatorPerspective:primary
+com.teamcenter.rac.gettingstarted.GettingStartedPerspective:secondary
+If any conflict is found in the preference values then that value will be skipped.
+The preference does not have any value by default, which means that all applications are loaded as default in Teamcenter.
+If the value is &quot;EMPTY&quot;, no application is displayed in the LHN. 
+After modifying the preference, the rich client needs to be restarted.
+Preference values are only to be configured by a system administrator.</preference_description>
+      <context name="Teamcenter">
+        <value>com.teamcenter.rac.gettingstarted.GettingStartedPerspective:Primary</value>
+        <value>com.teamcenter.rac.ui.perspectives.navigatorPerspective:Primary</value>
+        <value>com.teamcenter.rac.vis.perspective.VisPerspective:Primary</value>
+        <value>com.teamcenter.rac.pse.PSEPerspective:Primary</value>
+        <value>com.teamcenter.rac.cm.perspectives.changeManager:Primary</value>
+        <value>com.teamcenter.rac.adalicense.ADALicensePerspective:Primary</value>
+        <value>com.teamcenter.rac.tcsim.caeperspective:Primary</value>
+        <value>com.teamcenter.rac.cme.collaborationcontext.CollaborationContextPerspective:Primary</value>
+        <value>com.teamcenter.rac.cme.pmp.PMPPerspective:Primary</value>
+        <value>com.teamcenter.rac.cme.mpp.MSEPerspective:Primary</value>
+        <value>com.teamcenter.rac.cme.mrm.ResourceManagerPerspective:Primary</value>
+        <value>com.teamcenter.rac.schedule.ScheduleManagerPerspective:Primary</value>
+        <value>com.teamcenter.rac.plmxmlexportimportadministration.PLMXMLExportImportAdministrationPerspective:Primary</value>
+        <value>com.teamcenter.rac.workflow.processviewer.WorkflowViewerPerspective:Primary</value>
+        <value>com.teamcenter.rac.workflow.processdesigner.WorkflowDesignerPerspective:Primary</value>
+        <value>com.teamcenter.rac.querybuilder.QueryBuilderPerspective:Secondary</value>
+      </context>
+    </preference>
+    <preference name="MEDefaultReferenceFrameRepresentation" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>MFGReferenceFrameRepresentation:MFGReferenceFrameRepresentation</value>
+      </context>
+    </preference>
+    <preference name="MyFavorites" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>QiDAAAl6pObYAC:MECollaborationContext:Sample:0000</value>
+      </context>
+    </preference>
+    <preference name="MyOpenSearchResults" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>General... (1):General...:Owning Group=dba~Type=Revision Rule~Owning User=infodba (infodba):0:com.teamcenter.rac.ui.perspectives.navigatorPerspective</value>
+      </context>
+    </preference>
+    <preference name="MySearchHistory" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>General... (1)^General...^Owning Group|dba|dba~Type|Revision Rule|RevisionRule~Owning User|infodba (infodba)|infodba^0^en_US</value>
+      </context>
+    </preference>
+    <preference name="PSEShowSuppressedOccsPref" type="Logical" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+    <preference name="Supercedure_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Cancels</value>
+        <value>Adds</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.kernel.TCSession.EndItemNumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Localization">
+    <category_description>No description available for this category.</category_description>
+    <preference name="TC_language_localized_property_value_entry" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the data entry locale (master locale) of the logged-on user. The master locale is the one used by the user to create/edit data in a localized property.
+Valid Values:
+cs_CZ - Czech
+de_DE - German
+en_US - English
+es_ES - Spanish
+fr_FR - French
+it_IT - Italian
+ja_JP - Japanese
+ko_KR - Korean
+ru_RU - Russian
+zh_CN - Chinese (as spoken in China)
+zh_TW - Chinese (as spoken in Taiwan)</preference_description>
+      <context name="Teamcenter">
+        <value></value>
+      </context>
+    </preference>
+  </category>
+  <category name="Product Structure.PSE Assembly">
+    <category_description>No description available for this category.</category_description>
+    <preference name="PSEShowUnconfigdEffPref" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines whether to display BOM lines containing effectivity data that do not match the current revision rule, by default, when a structure is opened in Structure Manager.This site preference has a corresponding user preference of the same name. Users can set this user preference through the View-&gt;Show Unconfigured By Occurrence Effectivity menu command. The first time a user selects this option, a PSEShowUnconfigdEffPref user preference instance is created and stored in the user&apos;s BLOB file. User preferences take precedence over site preferences.There are some cases where you may want BOM lines to display at your site regardless of whether their variant conditions match the current variant rule, and yet you want to determine whether a given BOM line is configured. To do so, set the following properties in the Properties table as indicated to display an unconfigured BOM line:bl_is_variant is set to Ybl_variant_state is blank
+Valid Values:
+true - BOM lines are displayed regardless of whether their occurrence date effectivity data matches the current revision rule.
+false - BOM lines are hidden if their occurrence date effectivity data does not match the current revision rule.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="PSEShowUnconfigdVarPref" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines whether to display BOM lines containing variant conditions that are not configured for the current variant rule, by default, when a structure is opened in Structure Manager. This preference is relevant for both modular and legacy variant functionality.This site preference has a corresponding user preference of the same name. Users can set the user preference through the View-&gt;Show Unconfigured Variants menu command. The first time a user selects this option, a PSEShowUnconfigdVarPref user preference instance is created and stored in the user&apos;s BLOB file. User preferences take precedence over site preferences.There are some cases where you may want BOM lines to display at your site regardless of whether their variant conditions are configured for the current variant rule, and yet you want to determine whether a given BOM line is configured. To do so, set the following properties in the Properties table as indicated to display an unconfigured BOM line:bl_is_variant is set to Ybl_variant_state is blank
+Valid Values:
+true - BOM lines are displayed regardless of whether their variant conditions are configured for the current variant rule. For example, use this setting when you want to write the entire Structure Manager window to a tab-delimited file in order to import the BOM into an Excel spreadsheet.
+false - BOM lines are hidden if their variant conditions are not configure for the current variant rule.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Product Structure.Where Used">
+    <category_description>No description available for this category.</category_description>
+    <preference name="IsWhereUsedConfiguredModeEnabled" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Monitors the Where Used Configured Parent option in the Impact Analysis view.
+
+Note: This preference is not for customer customization. The value for this
+preference is set by the system at the user level. This preference
+informs the Graphics Panel the state of &quot;Configure Parent And Child&quot; option.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Rich Client">
+    <category_description>No description available for this category.</category_description>
+    <preference name="Cm0ActionItemRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Cm0ActionItemRevision object.</preference_description>
+      <context name="Teamcenter">
+        <value>CMHasProblemItem</value>
+        <value>CMReferences</value>
+        <value>CMImplementedBy</value>
+        <value>cm0RaisedByAudit</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="Cm0CfgAuditRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Cm0CfgAuditRevision object.</preference_description>
+      <context name="Teamcenter">
+        <value>CMHasImpactedItem</value>
+        <value>Cm0RaisesActionItems</value>
+        <value>Cm0AuditsItem</value>
+        <value>Cm0HasContract</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="Cm0DevRqstRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines the list of pseudo folders and their corresponding relations for the Cm0DevRqstRevision object.</preference_description>
+      <context name="Teamcenter">
+        <value>CMHasProblemItem</value>
+        <value>CMHasImpactedItem</value>
+        <value>CMReferences</value>
+        <value>CMHasWorkBreakdown</value>
+        <value>CMImplements</value>
+        <value>CMImplementedBy</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="Design Revision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Design Revision object.</preference_description>
+      <context name="Teamcenter">
+        <value>representation_for</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="EngChange Revision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines the pseudo-folders to be displayed for Engineering Change revisions.</preference_description>
+      <context name="Teamcenter">
+        <value>affected_items</value>
+        <value>solution_items</value>
+        <value>problem_items</value>
+        <value>reference_items</value>
+        <value>addressed_by</value>
+        <value>tasks_to_perform</value>
+        <value>tasks_to_review</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="Fnd0VisioTmplRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of Visio Template Revision relations which need to be shown as &quot;pseudo-folder&quot;.
+This is a site preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Fnd0DiagramTmplRelation</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="HistoryIDList" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines an array of component UIDs.
+The value of this preference is maintained by the Rich Client for each user.
+Do not modify this preference manually.</preference_description>
+      <context name="Teamcenter">
+        <value>gaOAAUkppObYAC</value>
+        <value>gZGAAABspObYAC</value>
+        <value>gRCAAUw9pObYAC</value>
+        <value>gpLAAABspObYAC</value>
+        <value>xQMAAAaMpObYAC</value>
+        <value>QiDAAAl6pObYAC</value>
+        <value>QiFAAAW0pObYAC</value>
+        <value>wSEAAAB8pObYAC</value>
+        <value>QAKAAAA4pObYAC</value>
+        <value>wYMAAAw4pObYAC</value>
+        <value>QAOAAAA4pObYAC</value>
+        <value>wiJAAAwmpObYAC</value>
+        <value>wKMAAAB8pObYAC</value>
+      </context>
+    </preference>
+    <preference name="HistoryTitleList" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines an array of strings representing the text displayed for the Rich Client History entries.
+The value of this preference is maintained by the Rich Client for each user.
+This preference is used in conjunction with the HistoryIDList preference.
+Do not modify this preference manually.</preference_description>
+      <context name="Teamcenter">
+        <value>ID Display Rules-Proxy</value>
+        <value>000023-Test</value>
+        <value>My Active Folders</value>
+        <value>000023/A;1-Test</value>
+        <value>000059/A;1-Workset for 000023/A;1-Test</value>
+        <value>Sample</value>
+        <value>tes</value>
+        <value>Instruction_Manual.docx</value>
+        <value>Mailbox</value>
+        <value>MetaDataStamp Templates</value>
+        <value>Newstuff</value>
+        <value>Awp0ImageViewer</value>
+        <value>000030/A;1-Instruction Manual</value>
+      </context>
+    </preference>
+    <preference name="HistoryTypeList" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines an array of strings representing the component type for the Rich Client History entries.
+The value of this preference is maintained by the Rich Client for each user.
+This preference is used in conjunction with the HistoryIDList preference.
+Do not modify this preference manually.</preference_description>
+      <context name="Teamcenter">
+        <value>Awp0TileProxy</value>
+        <value>Item</value>
+        <value>Awp0MySearchFolder</value>
+        <value>ItemRevision</value>
+        <value>Fnd0WorksetRevision</value>
+        <value>MECollaborationContext</value>
+        <value>MECollaborationContext</value>
+        <value>MSWordX</value>
+        <value>Mail Folder</value>
+        <value>Folder</value>
+        <value>Newstuff Folder</value>
+        <value>HTML</value>
+        <value>DocumentRevision</value>
+      </context>
+    </preference>
+    <preference name="ItemRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Item Revision object. All the configured runtime properties defined on the Item Revision business object will be automatically added as preference values during login.
+If the preference value which is configured as a runtime property is deleted, it will be added back during login.
+For example, if the preference value &quot;geometric_interfaces&quot; (configured runtime property) defined on the &quot;ItemRevision_PseudoFolder&quot; preference is deleted, it will be added back during login.</preference_description>
+      <context name="Teamcenter">
+        <value>geometric_interfaces</value>
+        <value>parametric_interfaces</value>
+        <value>interpart_links</value>
+        <value>interpart_equations</value>
+        <value>mating_constraints</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="Part Revision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Part Revision object.</preference_description>
+      <context name="Teamcenter">
+        <value>TC_Is_Represented_By</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+    <preference name="ProblemReportRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for ProblemReportRevision object.</preference_description>
+      <context name="Teamcenter">
+        <value>CMHasProblemItem</value>
+        <value>CMReferences</value>
+        <value>CMImplementedBy</value>
+        <value>CAEAnalysis</value>
+        <value>MEProcess</value>
+        <value>MESetup</value>
+        <value>view</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Rich Client.Search">
+    <category_description>No description available for this category.</category_description>
+    <preference name="Change_Search_Default" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines which saved query displays in the search panel by default.
+Valid Values:
+Accepts a single string as a value. Must be a valid saved query.</preference_description>
+      <context name="Teamcenter">
+        <value>gEAAAAgYpObYAC</value>
+      </context>
+    </preference>
+  </category>
+</preferences>
