@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- TC Encapsulation : Mapping X-File  -->
 
 <Tc_data_access_config>
@@ -608,6 +608,17 @@
 					<p>WRITE</p>
 					<p>DELETE</p>
 				</revoke>
+			</ace_entry>
+		</named_acl>
+		<named_acl type="RULETREE">
+			<acl_name language="en_US">system user</acl_name>
+			<ace_entry>
+				<accessor_type>Owning Group</accessor_type>
+				<accessor></accessor>
+				<grant>
+					<p>READ</p>
+				</grant>
+				<revoke/>
 			</ace_entry>
 		</named_acl>
 		<named_acl type="RULETREE">
@@ -1407,6 +1418,22 @@
 			</ace_entry>
 		</named_acl>
 		<named_acl type="RULETREE">
+			<acl_name language="en_US">HideObjects</acl_name>
+			<ace_entry>
+				<accessor_type>Role</accessor_type>
+				<accessor>Tester</accessor>
+				<grant>
+					<p>READ</p>
+				</grant>
+				<revoke>
+					<p>WRITE</p>
+					<p>DELETE</p>
+					<p>CICO</p>
+					<p>CREATE</p>
+				</revoke>
+			</ace_entry>
+		</named_acl>
+		<named_acl type="RULETREE">
 			<acl_name language="en_US">Internal Data</acl_name>
 			<ace_entry>
 				<accessor_type>Owning User</accessor_type>
@@ -2111,17 +2138,52 @@
 			</ace_entry>
 		</named_acl>
 		<named_acl type="RULETREE">
+			<acl_name language="en_US">restrict rule</acl_name>
+			<ace_entry>
+				<accessor_type>Role</accessor_type>
+				<accessor>Tester</accessor>
+				<grant>
+					<p>READ</p>
+					<p>WRITE</p>
+					<p>DELETE</p>
+					<p>CICO</p>
+				</grant>
+				<revoke/>
+			</ace_entry>
+			<ace_entry>
+				<accessor_type>World</accessor_type>
+				<accessor></accessor>
+				<grant>
+					<p>READ</p>
+				</grant>
+				<revoke>
+					<p>WRITE</p>
+					<p>DELETE</p>
+					<p>CICO</p>
+				</revoke>
+			</ace_entry>
+		</named_acl>
+		<named_acl type="RULETREE">
 			<acl_name language="en_US">in-CLASS Objects</acl_name>
 		</named_acl>
 		<named_acl type="RULETREE">
 			<acl_name language="en_US">Projects</acl_name>
 			<ace_entry>
-				<accessor_type>Project Teams</accessor_type>
-				<accessor></accessor>
+				<accessor_type>Role</accessor_type>
+				<accessor>Tester</accessor>
 				<grant>
-					<p>READ</p>
+					<p>WRITE</p>
+					<p>CICO</p>
 				</grant>
 				<revoke/>
+			</ace_entry>
+			<ace_entry>
+				<accessor_type>World</accessor_type>
+				<accessor></accessor>
+				<grant/>
+				<revoke>
+					<p>CICO</p>
+				</revoke>
 			</ace_entry>
 		</named_acl>
 		<named_acl type="RULETREE">
@@ -2477,29 +2539,6 @@
 					<p>READ</p>
 					<p>WRITE</p>
 					<p>DELETE</p>
-				</revoke>
-			</ace_entry>
-		</named_acl>
-		<named_acl type="RULETREE">
-			<acl_name language="en_US">Configurator Rule Set ACL</acl_name>
-			<ace_entry>
-				<accessor_type>Group</accessor_type>
-				<accessor>dba</accessor>
-				<grant>
-					<p>READ</p>
-				</grant>
-				<revoke>
-					<p>WRITE</p>
-				</revoke>
-			</ace_entry>
-			<ace_entry>
-				<accessor_type>World</accessor_type>
-				<accessor></accessor>
-				<grant/>
-				<revoke>
-					<p>READ</p>
-					<p>WRITE</p>
-					<p>CICO</p>
 				</revoke>
 			</ace_entry>
 		</named_acl>
@@ -2918,11 +2957,6 @@
 			<rule_argument>POM_object</rule_argument>
 			<acl_name/>
 			<tree_node>
-				<rule_name>Current Group Is</rule_name>
-				<rule_argument>Sponsor</rule_argument>
-				<acl_name>Sponsors</acl_name>
-			</tree_node>
-			<tree_node>
 				<rule_name>Has Bypass</rule_name>
 				<rule_argument>true</rule_argument>
 				<acl_name>Bypass</acl_name>
@@ -2935,16 +2969,6 @@
 					<rule_name>Has Application</rule_name>
 					<rule_argument>ClassificationAdministration</rule_argument>
 					<acl_name>in-CLASS Admin Objects</acl_name>
-					<tree_node>
-						<rule_name>Has Type</rule_name>
-						<rule_argument>Cfg0CompiledRuleSet</rule_argument>
-						<acl_name>Configurator Rule Set ACL</acl_name>
-						<tree_node>
-							<rule_name>Has Object ACL</rule_name>
-							<rule_argument>true</rule_argument>
-							<acl_name/>
-						</tree_node>
-					</tree_node>
 					<tree_node>
 						<rule_name>Owning User</rule_name>
 						<rule_argument>infodba</rule_argument>
@@ -3267,6 +3291,11 @@
 				<rule_argument>WorkspaceObject</rule_argument>
 				<acl_name/>
 				<tree_node>
+					<rule_name>Has Class</rule_name>
+					<rule_argument>WorkspaceObject</rule_argument>
+					<acl_name>HideObjects</acl_name>
+				</tree_node>
+				<tree_node>
 					<rule_name>Inactive Sequence</rule_name>
 					<rule_argument>true</rule_argument>
 					<acl_name>Inactive Sequence Objects</acl_name>
@@ -3461,6 +3490,11 @@
 				<rule_name>In Project</rule_name>
 				<rule_argument></rule_argument>
 				<acl_name>Projects</acl_name>
+				<tree_node>
+					<rule_name>In Project</rule_name>
+					<rule_argument>engine1</rule_argument>
+					<acl_name/>
+				</tree_node>
 			</tree_node>
 			<tree_node>
 				<rule_name>Owning Group Has Security</rule_name>
@@ -3721,11 +3755,6 @@
 					<rule_argument>Fnd0MarkupChange</rule_argument>
 					<acl_name>MarkupChangeACL</acl_name>
 				</tree_node>
-			</tree_node>
-			<tree_node>
-				<rule_name>Has Class</rule_name>
-				<rule_argument>POM_object</rule_argument>
-				<acl_name>Effectivity Access</acl_name>
 			</tree_node>
 		</tree_node>
 	</rule_tree>
