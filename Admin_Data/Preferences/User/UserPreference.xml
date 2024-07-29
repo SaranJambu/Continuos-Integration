@@ -1,11 +1,41 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <preferences version="10.0">
+  <category name="4GD">
+    <category_description>No description available for this category.</category_description>
+    <preference name="TC_config_rule_name" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the default revision rule used when selecting the product context based on the chosen product item. If not defined, Latest Working/Any Release Status is used.
+Valid Values:
+One or more strings as values; each string must be a valid revision rule.</preference_description>
+      <context name="Teamcenter">
+        <value>Working; Any Status</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Active Workspace">
+    <category_description>No description available for this category.</category_description>
+    <preference name="AWC_ColorFiltering" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Activates the color filtering for search results in the Search application of the Active Workspace.
+The default value is true (color filtering activated).</preference_description>
+      <context name="Teamcenter">
+        <value>true</value>
+      </context>
+    </preference>
+  </category>
   <category name="Active Workspace Search">
     <category_description>Active Workspace Search preferences</category_description>
     <preference name="AWC_Rev_Rule_Selected" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
-      <preference_description>Specifiess the revision rule selected by the user in Active Workspace. Make sure this preference is deleted if the first value of &quot;AWC_Rev_Rule_List&quot; preference has to be selected in AWC Client. Add a valid value to this preference if a specific revision rule in the list has to be selected. If the &quot;AWC_Rev_Rule_List&quot; preference is modified to remove the value matching the AWC_Rev_Rule_Selected value, delete this preference.&quot;</preference_description>
+      <preference_description>Specifies the revision rule selected by the user in Active Workspace. Make sure this preference is deleted if the first value of &quot;AWC_Rev_Rule_List&quot; preference has to be selected in AWC Client. Add a valid value to this preference if a specific revision rule in the list has to be selected. If the &quot;AWC_Rev_Rule_List&quot; preference is modified to remove the value matching the AWC_Rev_Rule_Selected value, delete this preference.&quot;</preference_description>
       <context name="Teamcenter">
-        <value>Latest Working</value>
+        <value>Working; Any Status</value>
+      </context>
+    </preference>
+    <preference name="AWC_UidsForQuickSearch" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference. In order to show the quick searches in correct form regardless of locales, this preferences is used.
+For the quick searches stored in Quick_Access_Queries preference, this is a corresponding preference which contains the quick search UIDs.</preference_description>
+      <context name="Teamcenter">
+        <value>gEAAAAgYZqsrVB</value>
+        <value>gEMAAAgYZqsrVB</value>
+        <value>gEGAAAgYZqsrVB</value>
       </context>
     </preference>
   </category>
@@ -18,13 +48,278 @@
       </context>
     </preference>
   </category>
+  <category name="Administration.Access Manager">
+    <category_description>No description available for this category.</category_description>
+    <preference name="TC_show_all_aces" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Influences the Access Control Entries (ACEs) displayed in the Access Control List (ACL) dialog.
+Valid values are:
+* false: To display only the ACEs relevant to the session user and the object ACLs. This is the default value.
+* true: To display all ACEs relevant to the object.</preference_description>
+      <context name="Teamcenter">
+        <value>1</value>
+      </context>
+    </preference>
+  </category>
   <category name="Column Preferences">
     <category_description>No description available for this category.</category_description>
+    <preference name="ItemRevisionColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for the BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_quantity</value>
+        <value>bl_item_object_desc</value>
+        <value>bl_is_occ_configured</value>
+      </context>
+    </preference>
+    <preference name="ItemRevisionDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOM Line properties which display names appear as columns from left-to-right for Product Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_quantity</value>
+        <value>BOMLine.bl_item_object_desc</value>
+        <value>BOMLine.bl_is_occ_configured</value>
+      </context>
+    </preference>
+    <preference name="ItemRevisionShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the column widths for the columns (identified by MEProductContextColumnsShownPref) displayed in the BOM tree table within the Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>41</value>
+        <value>8</value>
+        <value>18</value>
+        <value>19</value>
+      </context>
+    </preference>
+    <preference name="MEPlantContextColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_quantity</value>
+        <value>bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEPlantContextDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOM Line properties which display names appear as columns from left-to-right for Plant Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_quantity</value>
+        <value>BOMLine.bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEPlantContextShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the widths for the columns displayed (identified by MEPlantContextColumnsShownPref) in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>27</value>
+        <value>8</value>
+        <value>50</value>
+      </context>
+    </preference>
+    <preference name="MEProcessContextColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for the BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEProcessContextDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOP Line properties which display names appear as columns from left-to-right for Process Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEProcessContextShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the column widths for the columns (identified by MEProcessContextColumnsShownPref) within the Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>27</value>
+        <value>50</value>
+      </context>
+    </preference>
+    <preference name="MEProcessRevisionColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for the BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEProcessRevisionDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOP Line properties which display names appear as columns from left-to-right for Process Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEProcessRevisionShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the column widths for the columns (identified by MEProcessContextColumnsShownPref) within the Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>27</value>
+        <value>50</value>
+      </context>
+    </preference>
+    <preference name="MEProductContextColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for the BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_quantity</value>
+        <value>bl_item_object_desc</value>
+        <value>bl_is_occ_configured</value>
+      </context>
+    </preference>
+    <preference name="MEProductContextDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOM Line properties which display names appear as columns from left-to-right for Product Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_quantity</value>
+        <value>BOMLine.bl_item_object_desc</value>
+        <value>BOMLine.bl_is_occ_configured</value>
+      </context>
+    </preference>
+    <preference name="MEProductContextShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the column widths for the columns (identified by MEProductContextColumnsShownPref) displayed in the BOM tree table within the Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>20</value>
+        <value>8</value>
+        <value>18</value>
+        <value>19</value>
+      </context>
+    </preference>
+    <preference name="MEWorkareaRevisionColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of columns that will be displayed for BOM tree table in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_quantity</value>
+        <value>bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEWorkareaRevisionDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of BOM Line properties which display names appear as columns from left-to-right for Plant Structure objects in Collaboration Manufacturing Engineering applications.
+This preference value is only a repository, and it is not to be modified other than by the code itself.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_quantity</value>
+        <value>BOMLine.bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="MEWorkareaRevisionShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the widths for the columns displayed (identified by MEPlantContextColumnsShownPref) in Collaboration Manufacturing Engineering applications.</preference_description>
+      <context name="Teamcenter">
+        <value>27</value>
+        <value>8</value>
+        <value>50</value>
+      </context>
+    </preference>
+    <preference name="Mfg0MEPlantBOPRevisionColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines the columns displayed in the base view of a plant BOP.
+Valid Values:
+Accepts the internal name of each column in the order you want them to appear. For example:
+value_1, value_2, and so on.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_item_object_type</value>
+        <value>bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="Mfg0MEPlantBOPRevisionDisplayNameColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the internal names of the BOM line properties that are displayed as columns in the plant view.This preference is an internal preference and should be modified by the code only.
+Valid Values:
+Accepts the internal name of each column in the order you want them to appear. For example: 
+object_type, property_name, and so on.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_item_object_type</value>
+        <value>BOMLine.bl_item_object_desc</value>
+      </context>
+    </preference>
+    <preference name="Mfg0MEPlantBOPRevisionShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the width of the columns displayed in the base view of the plant BOP. This setting affects each column defined in the Mfg0MEPlantBOPRevisionColumnsShownPref preference.
+Valid Values:
+Accepts a list of integers that define the number of characters permitted in each column. There should be one value for each column defined in the Mfg0MEPlantBOPRevisionColumnsShownPref preference, and the values are applied in the same order (that is, the first value in this preference is applied to the first column in the Mfg0MEPlantBOPRevisionColumnsShownPref, and so on).</preference_description>
+      <context name="Teamcenter">
+        <value>25</value>
+        <value>25</value>
+        <value>25</value>
+      </context>
+    </preference>
+    <preference name="PSEDisplayNameWithTypeColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the internal names of BOM line properties whose display names appear as columns from left-to-right in the Structure Manager application. This preference must contain the same set of BOM line properties that are specified in the PortalPSEColumnsShownPref preference. The only difference is that the property names in this preference must be prefixed with the type name.
+Valid Values:
+Accepts multiple strings as values. Each value must be a valid BOM line property prefixed with a valid type. Each value must correspond with a value defined in the PortalPSEColumnsShownPref preference. Values must be listed in the same order in both preferences.The default type for Structure Manager properties is BOMLine.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_quantity</value>
+        <value>BOMLine.bl_item_object_type</value>
+        <value>BOMLine.bl_config_string</value>
+        <value>BOMLine.bl_rev_release_status_list</value>
+        <value>BOMLine.bl_sequence_no</value>
+        <value>BOMLine.bl_part_source</value>
+        <value>BOMLine.bl_uom</value>
+        <value>BOMLine.bl_ref_designator</value>
+        <value>BOMLine.bl_all_notes</value>
+        <value>BOMLine.bl_variant_state</value>
+        <value>BOMLine.bl_rev_has_variants</value>
+        <value>BOMLine.bl_variant_condition</value>
+        <value>BOMLine.bl_is_occ_configured</value>
+        <value>BOMLine.bl_has_date_effectivity</value>
+        <value>BOMLine.bl_rev_checked_out</value>
+        <value>BOMLine.fnd0bl_has_active_markup</value>
+      </context>
+    </preference>
+    <preference name="PortalPSEColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the list of Structure Manager columns displayed from left-to-right. To display the Explore Checked Out property, add the bl_rev_expl_checkout value to this list. Depending on your system configuration, you may also have to set the PSEDisplayNameWithTypeColumnsShownPref preference.
+Valid Values:
+Accepts multiple strings as values. It must be a valid BOM line property.</preference_description>
+      <context name="Teamcenter">
+        <value>bl_indented_title</value>
+        <value>bl_quantity</value>
+        <value>bl_item_object_type</value>
+        <value>bl_config_string</value>
+        <value>bl_rev_release_status_list</value>
+        <value>bl_sequence_no</value>
+        <value>bl_part_source</value>
+        <value>bl_uom</value>
+        <value>bl_ref_designator</value>
+        <value>bl_all_notes</value>
+        <value>bl_variant_state</value>
+        <value>bl_rev_has_variants</value>
+        <value>bl_variant_condition</value>
+        <value>bl_is_occ_configured</value>
+        <value>bl_has_date_effectivity</value>
+        <value>bl_rev_checked_out</value>
+        <value>fnd0bl_has_active_markup</value>
+      </context>
+    </preference>
+    <preference name="PortalPSEShownColumnWidthsPref" type="Integer" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies the widths for the PSE shown Columns (left-to-right order).</preference_description>
+      <context name="Teamcenter">
+        <value>41</value>
+        <value>15</value>
+        <value>15</value>
+        <value>18</value>
+        <value>23</value>
+        <value>9</value>
+        <value>5</value>
+        <value>3</value>
+        <value>9</value>
+        <value>19</value>
+        <value>4</value>
+        <value>4</value>
+        <value>21</value>
+        <value>4</value>
+        <value>16</value>
+        <value>4</value>
+        <value>4</value>
+      </context>
+    </preference>
     <preference name="QRYColumnsShownPref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>Determines the queries available for selection from the Find menu in both the rich client and the thin client.
 Valid Values:
 Valid Teamcenter query classes.</preference_description>
       <context name="Teamcenter">
+        <value>General...</value>
         <value>Item...</value>
         <value>Item Revision...</value>
         <value>Remote...</value>
@@ -34,16 +329,152 @@ Valid Teamcenter query classes.</preference_description>
   </category>
   <category name="General">
     <category_description>No description available for this category.</category_description>
+    <preference name="A7BikeRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>A7BikeRevision.object_string</value>
+        <value>A7BikeRevision.object_type</value>
+        <value>A7BikeRevision.relation</value>
+        <value>A7BikeRevision.owning_user</value>
+        <value>A7BikeRevision.owning_group</value>
+        <value>A7BikeRevision.last_mod_date</value>
+        <value>A7BikeRevision.checked_out</value>
+        <value>A7BikeRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="A7BikeRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="A7CarRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>A7CarRevision.object_string</value>
+        <value>A7CarRevision.object_type</value>
+        <value>A7CarRevision.relation</value>
+        <value>A7CarRevision.owning_user</value>
+        <value>A7CarRevision.owning_group</value>
+        <value>A7CarRevision.last_mod_date</value>
+        <value>A7CarRevision.checked_out</value>
+        <value>A7CarRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="A7CarRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="A7cycleRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>A7cycleRevision.object_string</value>
+        <value>A7cycleRevision.object_type</value>
+        <value>A7cycleRevision.relation</value>
+        <value>A7cycleRevision.owning_user</value>
+        <value>A7cycleRevision.owning_group</value>
+        <value>A7cycleRevision.last_mod_date</value>
+        <value>A7cycleRevision.checked_out</value>
+        <value>A7cycleRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="A7cycleRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>25</value>
+        <value>36</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="A7cycle_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>A7cycle.object_string</value>
+        <value>A7cycle.object_type</value>
+        <value>A7cycle.relation</value>
+        <value>A7cycle.owning_user</value>
+        <value>A7cycle.owning_group</value>
+        <value>A7cycle.last_mod_date</value>
+        <value>A7cycle.checked_out</value>
+        <value>A7cycle.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="A7cycle_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>43</value>
+        <value>32</value>
+        <value>22</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="A7engineRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>A7engineRevision.object_string</value>
+        <value>A7engineRevision.object_type</value>
+        <value>A7engineRevision.relation</value>
+        <value>A7engineRevision.owning_user</value>
+        <value>A7engineRevision.owning_group</value>
+        <value>A7engineRevision.last_mod_date</value>
+        <value>A7engineRevision.checked_out</value>
+        <value>A7engineRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="A7engineRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>45</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
     <preference name="AWC_LastUsed_Workspace" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>Devops</value>
+        <value>AuthorSaran</value>
+      </context>
+    </preference>
+    <preference name="AWS_SearchPreFilter_Property1_SelectedValue" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value></value>
       </context>
     </preference>
     <preference name="AWS_SearchPreFilter_Property2_SelectedValue" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>Work Packages</value>
+        <value>Parts</value>
       </context>
     </preference>
     <preference name="AW_SubLocation_AdvancedSearchSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -55,13 +486,13 @@ Valid Teamcenter query classes.</preference_description>
     <preference name="AW_SubLocation_Generic_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>SummaryView</value>
+        <value>TreeSummaryView</value>
       </context>
     </preference>
     <preference name="AW_SubLocation_OccurrenceManagementSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>TreeSummaryView</value>
+        <value>TreeView</value>
       </context>
     </preference>
     <preference name="AW_SubLocation_SavedSearchSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -88,7 +519,7 @@ Valid Teamcenter query classes.</preference_description>
         <value>SummaryView</value>
       </context>
     </preference>
-    <preference name="AW_SubLocation_myProjectListSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+    <preference name="AW_SubLocation_idDisplayRulesSubLocation_ViewMode" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
         <value>SummaryView</value>
@@ -100,6 +531,38 @@ Valid Teamcenter query classes.</preference_description>
         <value>SummaryView</value>
       </context>
     </preference>
+    <preference name="Awp0TileTemplate_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Awp0TileTemplate.object_string</value>
+        <value>Awp0TileTemplate.object_type</value>
+        <value>Awp0TileTemplate.relation</value>
+        <value>Awp0TileTemplate.owning_user</value>
+        <value>Awp0TileTemplate.owning_group</value>
+        <value>Awp0TileTemplate.last_mod_date</value>
+        <value>Awp0TileTemplate.checked_out</value>
+        <value>Awp0TileTemplate.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="Awp0TileTemplate_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="BOMLine_SavedColumnConfigurations" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>dba</value>
+      </context>
+    </preference>
     <preference name="BOMSupersedure_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
@@ -107,18 +570,125 @@ Valid Teamcenter query classes.</preference_description>
         <value>CMCancels</value>
       </context>
     </preference>
+    <preference name="ChangeRequestRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>ChangeRequestRevision.object_string</value>
+        <value>ChangeRequestRevision.object_type</value>
+        <value>ChangeRequestRevision.relation</value>
+        <value>ChangeRequestRevision.owning_user</value>
+        <value>ChangeRequestRevision.owning_group</value>
+        <value>ChangeRequestRevision.last_mod_date</value>
+        <value>ChangeRequestRevision.checked_out</value>
+        <value>ChangeRequestRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="ChangeRequestRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>43</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="Confirm_checkin_suppressed" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies whether the Don&apos;t show confirmation dialog again check box is selected in the Check-In dialog box in the rich client and thin client.
+Valid Values:
+true - The check box is selected and checkin proceeds without confirmation.
+false - The check box is not selected and checkin requires confirmation.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="Confirm_checkout_suppressed" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies whether the Don&apos;t show confirmation dialog again check box is selected in the Check-Out dialog box in the rich client and thin client.
+Valid Values:
+true - The check box is selected and checkout proceeds without confirmation.
+false - The check box is not selected and checkout requires confirmation.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="Create_ChangeItem_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>MI8EngChgNtc</value>
+        <value>ProblemReport</value>
+        <value>A7Pro_rep_cus</value>
+      </context>
+    </preference>
+    <preference name="Create_MEOP_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>MEOP</value>
+      </context>
+    </preference>
+    <preference name="Create_MEProcess_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>MEProcess</value>
+      </context>
+    </preference>
+    <preference name="Create_MEWorkarea_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>MEStation</value>
+        <value>MELine</value>
+        <value>MEPlant</value>
+      </context>
+    </preference>
+    <preference name="Create_Mfg0MEPlantBOP_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Mfg0MEPlantBOP</value>
+      </context>
+    </preference>
     <preference name="Create_WORKSPACE_OBJECT_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
+        <value>Part</value>
+        <value>Document</value>
         <value>Item</value>
+        <value>A7cycle</value>
+        <value>A7Bike</value>
+        <value>A7Car</value>
       </context>
     </preference>
-    <preference name="Default_Quick_Access_Query" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
-      <preference_description>Defines the default quick search internal name.
-Valid Values:
-Any valid internal search name.</preference_description>
+    <preference name="Fnd0HomeFolder_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>Item Revision...</value>
+        <value>Fnd0HomeFolder.object_string</value>
+        <value>Fnd0HomeFolder.object_type</value>
+        <value>Fnd0HomeFolder.relation</value>
+        <value>Fnd0HomeFolder.owning_user</value>
+        <value>Fnd0HomeFolder.owning_group</value>
+        <value>Fnd0HomeFolder.last_mod_date</value>
+        <value>Fnd0HomeFolder.checked_out</value>
+        <value>Fnd0HomeFolder.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="Fnd0HomeFolder_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="GCSModePref" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>1</value>
       </context>
     </preference>
     <preference name="LHN_Applications_List" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -137,7 +707,6 @@ Preference values are only to be configured by a system administrator.</preferen
         <value>com.teamcenter.rac.ui.perspectives.navigatorPerspective:Primary</value>
         <value>com.teamcenter.rac.vis.perspective.VisPerspective:Primary</value>
         <value>com.teamcenter.rac.pse.PSEPerspective:Primary</value>
-        <value>com.teamcenter.rac.cm.perspectives.changeManager:Primary</value>
         <value>com.teamcenter.rac.adalicense.ADALicensePerspective:Primary</value>
         <value>com.teamcenter.rac.tcsim.caeperspective:Primary</value>
         <value>com.teamcenter.rac.cme.collaborationcontext.CollaborationContextPerspective:Primary</value>
@@ -145,10 +714,12 @@ Preference values are only to be configured by a system administrator.</preferen
         <value>com.teamcenter.rac.cme.mpp.MSEPerspective:Primary</value>
         <value>com.teamcenter.rac.cme.mrm.ResourceManagerPerspective:Primary</value>
         <value>com.teamcenter.rac.schedule.ScheduleManagerPerspective:Primary</value>
-        <value>com.teamcenter.rac.plmxmlexportimportadministration.PLMXMLExportImportAdministrationPerspective:Primary</value>
-        <value>com.teamcenter.rac.workflow.processviewer.WorkflowViewerPerspective:Primary</value>
+        <value>com.teamcenter.rac.organization.OrganizationPerspective:Primary</value>
+        <value>com.teamcenter.rac.accessmanager.AccessManagerPerspective:Primary</value>
+        <value>com.teamcenter.rac.project.ProjectPerspective:Primary</value>
         <value>com.teamcenter.rac.workflow.processdesigner.WorkflowDesignerPerspective:Primary</value>
-        <value>com.teamcenter.rac.querybuilder.QueryBuilderPerspective:Secondary</value>
+        <value>com.teamcenter.rac.querybuilder.QueryBuilderPerspective:Primary</value>
+        <value>com.teamcenter.rac.cm.perspectives.changeManager:Secondary</value>
       </context>
     </preference>
     <preference name="MEDefaultReferenceFrameRepresentation" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -157,28 +728,133 @@ Preference values are only to be configured by a system administrator.</preferen
         <value>MFGReferenceFrameRepresentation:MFGReferenceFrameRepresentation</value>
       </context>
     </preference>
-    <preference name="MyFavorites" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
-      <preference_description>This is an internal preference.</preference_description>
-      <context name="Teamcenter">
-        <value>QiDAAAl6pObYAC:MECollaborationContext:Sample:0000</value>
-      </context>
-    </preference>
     <preference name="MyOpenSearchResults" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>General... (1):General...:Owning Group=dba~Type=Revision Rule~Owning User=infodba (infodba):0:com.teamcenter.rac.ui.perspectives.navigatorPerspective</value>
+        <value></value>
       </context>
     </preference>
     <preference name="MySearchHistory" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
-        <value>General... (1)^General...^Owning Group|dba|dba~Type|Revision Rule|RevisionRule~Owning User|infodba (infodba)|infodba^0^en_US</value>
+        <value>item_check (1)^item_check^ID|000200|000200^0^en_US</value>
+        <value>General... (6)^General...^Name|awp*item*|awp*item*~Type|XMLRenderingStylesheet|XMLRenderingStylesheet^0^en_US</value>
+        <value>General... (5)^General...^Name|*item*|*item*~Type|XMLRenderingStylesheet|XMLRenderingStylesheet^0^en_US</value>
+        <value>General... (4)^General...^Name|*stylesheet*|*stylesheet*^0^en_US</value>
+        <value>General... (3)^General...^Name|*stylesheet|*stylesheet^0^en_US</value>
+        <value>General... (2)^General...^Type|XMLRenderingStylesheet|XMLRenderingStylesheet^0^en_US</value>
+        <value>General... (1)^General...^Owning Group|dba|dba~Type|XMLRenderingStylesheet|XMLRenderingStylesheet~Owning User|infodba|infodba^0^en_US</value>
+        <value>item-- (13)^item--^Description|*|*~ID|*|*^0^en_US</value>
       </context>
     </preference>
     <preference name="PSEShowSuppressedOccsPref" type="Logical" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
         <value>true</value>
+      </context>
+    </preference>
+    <preference name="ProblemReportRevision_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>ProblemReportRevision.object_string</value>
+        <value>ProblemReportRevision.object_type</value>
+        <value>ProblemReportRevision.relation</value>
+        <value>ProblemReportRevision.owning_user</value>
+        <value>ProblemReportRevision.owning_group</value>
+        <value>ProblemReportRevision.last_mod_date</value>
+        <value>ProblemReportRevision.checked_out</value>
+        <value>ProblemReportRevision.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="ProblemReportRevision_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>28</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMHasProblemItem_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>PseudoFolder.object_string</value>
+        <value>PseudoFolder.object_type</value>
+        <value>PseudoFolder.relation</value>
+        <value>PseudoFolder.owning_user</value>
+        <value>PseudoFolder.owning_group</value>
+        <value>PseudoFolder.last_mod_date</value>
+        <value>PseudoFolder.checked_out</value>
+        <value>PseudoFolder.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMHasProblemItem_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>25</value>
+        <value>32</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMImplementedBy_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>PseudoFolder.object_string</value>
+        <value>PseudoFolder.object_type</value>
+        <value>PseudoFolder.relation</value>
+        <value>PseudoFolder.owning_user</value>
+        <value>PseudoFolder.owning_group</value>
+        <value>PseudoFolder.last_mod_date</value>
+        <value>PseudoFolder.checked_out</value>
+        <value>PseudoFolder.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMImplementedBy_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>13</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMReferences_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>PseudoFolder.object_string</value>
+        <value>PseudoFolder.object_type</value>
+        <value>PseudoFolder.relation</value>
+        <value>PseudoFolder.owning_user</value>
+        <value>PseudoFolder.owning_group</value>
+        <value>PseudoFolder.last_mod_date</value>
+        <value>PseudoFolder.checked_out</value>
+        <value>PseudoFolder.release_status_list</value>
+      </context>
+    </preference>
+    <preference name="PseudoFolder.CMReferences_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>30</value>
+        <value>17</value>
+        <value>29</value>
+        <value>9</value>
+        <value>9</value>
+        <value>17</value>
+        <value>6</value>
+        <value>26</value>
       </context>
     </preference>
     <preference name="Supercedure_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -188,10 +864,136 @@ Preference values are only to be configured by a system administrator.</preferen
         <value>Adds</value>
       </context>
     </preference>
+    <preference name="TC_LAST_USED_PATTERNS" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Stores the last selected naming pattern for a given business object property. The values will be set when Naming Rules are used for different operations. This preference is not meant to be modified manually.
+Valid Values:
+Accepts one or more strings as values, each string must be a valid naming pattern.</preference_description>
+      <context name="Teamcenter">
+        <value>isTrue:A7cycle:object_name:&quot;Cycle-&quot;nnnnn</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.cme.mpp.MPPApplication.openedItemsMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>ALOAAAToZqsrVBAAAAAAAAAAAAA</value>
+        <value>QHPAAMhnZqsrVBAAAAAAAAAAAAA</value>
+        <value>Q_PAAMxDZqsrVBAAAAAAAAAAAAA</value>
+        <value>AzNAAMhnZqsrVBAAAAAAAAAAAAA</value>
+        <value>B8NAAMxDZqsrVBAAAAAAAAAAAAA</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.cme.mpp.MPPApplication.openedItemsNumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>5</value>
+      </context>
+    </preference>
     <preference name="com.teamcenter.rac.kernel.TCSession.EndItemNumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>This is an internal preference.</preference_description>
       <context name="Teamcenter">
         <value>4</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.kernel.TCSession.Fnd0EffectvtyGrpNumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.pse.PSEApplication.MRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>ALJAAAToZqsrVBAAAAAAAAAAAAA</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.pse.PSEApplication.NumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.pse.PSEApplication.RevRuleMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>Q4CAAAA4ZqsrVBAAAAAAAAAAAAA</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.pse.PSEApplication.RevRuleNumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.schedule.ScheduleViewApplication.NumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.workflow.processviewer.ProcessViewerApplication.MRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>QDHAAAXZZqsrVBAAAAAAAAAAAAA</value>
+      </context>
+    </preference>
+    <preference name="com.teamcenter.rac.workflow.processviewer.ProcessViewerApplication.NumberOfMRUEntries" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>4</value>
+      </context>
+    </preference>
+    <preference name="dba_ColumnPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>BOMLine.bl_indented_title</value>
+        <value>BOMLine.bl_item_object_type</value>
+        <value>BOMLine.bl_config_string</value>
+        <value>BOMLine.bl_rev_release_status_list</value>
+        <value>BOMLine.bl_sequence_no</value>
+        <value>BOMLine.bl_part_source</value>
+        <value>BOMLine.bl_uom</value>
+        <value>BOMLine.bl_ref_designator</value>
+        <value>BOMLine.bl_all_notes</value>
+        <value>BOMLine.bl_variant_state</value>
+        <value>BOMLine.bl_rev_has_variants</value>
+        <value>BOMLine.bl_variant_condition</value>
+        <value>BOMLine.bl_is_occ_configured</value>
+        <value>BOMLine.bl_has_date_effectivity</value>
+        <value>BOMLine.bl_rev_checked_out</value>
+        <value>BOMLine.fnd0bl_has_active_markup</value>
+        <value>BOMLine.a7Current</value>
+        <value>BOMLine.a7Voltage</value>
+        <value>Mfg0BvrWeldPoint.Mfg0resistance</value>
+      </context>
+    </preference>
+    <preference name="dba_ColumnWidthPreferences" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+        <value>15</value>
+      </context>
+    </preference>
+    <preference name="dba_DESC" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This is an internal preference.</preference_description>
+      <context name="Teamcenter">
+        <value></value>
       </context>
     </preference>
   </category>
@@ -293,6 +1095,25 @@ informs the Graphics Panel the state of &quot;Configure Parent And Child&quot; o
         <value>view</value>
       </context>
     </preference>
+    <preference name="Create_Item_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines a list of most recently used types for Item creation.</preference_description>
+      <context name="Teamcenter">
+        <value>Mfg0MEResource</value>
+        <value>A7cycle</value>
+        <value>MI8MechPart</value>
+        <value>MI8ElecPart</value>
+        <value>Item</value>
+      </context>
+    </preference>
+    <preference name="Create_WorkspaceObject_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines a list of most recently used object types for WorkspaceObject creation.</preference_description>
+      <context name="Teamcenter">
+        <value>Awp0Tile</value>
+        <value>Awp0TileTemplate</value>
+        <value>Folder</value>
+        <value>Item</value>
+      </context>
+    </preference>
     <preference name="Design Revision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
       <preference_description>Specifies the list of properties that can be displayed as a pseudo-folder under a node for Design Revision object.</preference_description>
       <context name="Teamcenter">
@@ -335,19 +1156,26 @@ This is a site preference.</preference_description>
 The value of this preference is maintained by the Rich Client for each user.
 Do not modify this preference manually.</preference_description>
       <context name="Teamcenter">
-        <value>gaOAAUkppObYAC</value>
-        <value>gZGAAABspObYAC</value>
-        <value>gRCAAUw9pObYAC</value>
-        <value>gpLAAABspObYAC</value>
-        <value>xQMAAAaMpObYAC</value>
-        <value>QiDAAAl6pObYAC</value>
-        <value>QiFAAAW0pObYAC</value>
-        <value>wSEAAAB8pObYAC</value>
-        <value>QAKAAAA4pObYAC</value>
-        <value>wYMAAAw4pObYAC</value>
-        <value>QAOAAAA4pObYAC</value>
-        <value>wiJAAAwmpObYAC</value>
-        <value>wKMAAAB8pObYAC</value>
+        <value>AzNAAMhnZqsrVB</value>
+        <value>g3DAAMxDZqsrVB</value>
+        <value>B8NAAMxDZqsrVB</value>
+        <value>AjKAAE9BZqsrVB</value>
+        <value>QeOAAAz9ZqsrVB</value>
+        <value>AeDAAAToZqsrVB</value>
+        <value>gXPAAAz9ZqsrVB</value>
+        <value>AiHAAIwbZqsrVB</value>
+        <value>g3DAAIg7ZqsrVB</value>
+        <value>ACAAAAEmZqsrVB</value>
+        <value>A7NAAAz9ZqsrVB</value>
+        <value>QmPAAAt3ZqsrVB</value>
+        <value>gyOAAAToZqsrVB</value>
+        <value>wSGAAAToZqsrVB</value>
+        <value>wCKAAAToZqsrVB</value>
+        <value>fePAAEuwZqsrVB</value>
+        <value>wZJAAEo8ZqsrVB</value>
+        <value>g3AAAAxfZqsrVB</value>
+        <value>xaEAAETgZqsrVB</value>
+        <value>wRHAAIg4ZqsrVB</value>
       </context>
     </preference>
     <preference name="HistoryTitleList" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -356,19 +1184,26 @@ The value of this preference is maintained by the Rich Client for each user.
 This preference is used in conjunction with the HistoryIDList preference.
 Do not modify this preference manually.</preference_description>
       <context name="Teamcenter">
-        <value>ID Display Rules-Proxy</value>
-        <value>000023-Test</value>
-        <value>My Active Folders</value>
-        <value>000023/A;1-Test</value>
-        <value>000059/A;1-Workset for 000023/A;1-Test</value>
-        <value>Sample</value>
-        <value>tes</value>
-        <value>Instruction_Manual.docx</value>
-        <value>Mailbox</value>
-        <value>MetaDataStamp Templates</value>
-        <value>Newstuff</value>
-        <value>Awp0ImageViewer</value>
-        <value>000030/A;1-Instruction Manual</value>
+        <value>PenCC</value>
+        <value>000441-Line1</value>
+        <value>000443-Pen BOP</value>
+        <value>EP-000000000-Electrical part</value>
+        <value>000069-Pen</value>
+        <value>Pen</value>
+        <value>000069/B;1-Pen</value>
+        <value>000430/A;1-soa1</value>
+        <value>000429/A;1-soa</value>
+        <value>000100-custom part1</value>
+        <value>000070-Cover</value>
+        <value>000284/A;1-test</value>
+        <value>000056/A;1-Body</value>
+        <value>000060/A;1-Refill</value>
+        <value>000058/A;1-Rubber strip- dotted embossing</value>
+        <value>000061/C;1-Ink</value>
+        <value>000393/A;1-bike_item</value>
+        <value>cycle_icon</value>
+        <value>000366/A;1-testsuv</value>
+        <value>Latest Release Object</value>
       </context>
     </preference>
     <preference name="HistoryTypeList" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -377,19 +1212,26 @@ The value of this preference is maintained by the Rich Client for each user.
 This preference is used in conjunction with the HistoryIDList preference.
 Do not modify this preference manually.</preference_description>
       <context name="Teamcenter">
-        <value>Awp0TileProxy</value>
+        <value>MECollaborationContext</value>
+        <value>MELine</value>
+        <value>Mfg0MEPlantBOP</value>
+        <value>MI8ElecPart</value>
         <value>Item</value>
-        <value>Awp0MySearchFolder</value>
-        <value>ItemRevision</value>
-        <value>Fnd0WorksetRevision</value>
-        <value>MECollaborationContext</value>
-        <value>MECollaborationContext</value>
-        <value>MSWordX</value>
-        <value>Mail Folder</value>
         <value>Folder</value>
-        <value>Newstuff Folder</value>
-        <value>HTML</value>
-        <value>DocumentRevision</value>
+        <value>ItemRevision</value>
+        <value>Part Revision</value>
+        <value>Part Revision</value>
+        <value>Part</value>
+        <value>Item</value>
+        <value>A7BikeRevision</value>
+        <value>ItemRevision</value>
+        <value>ItemRevision</value>
+        <value>ItemRevision</value>
+        <value>ItemRevision</value>
+        <value>A7BikeRevision</value>
+        <value>JPEG</value>
+        <value>A7CarRevision</value>
+        <value>Awp0SearchFolder</value>
       </context>
     </preference>
     <preference name="ItemRevision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -406,6 +1248,30 @@ For example, if the preference value &quot;geometric_interfaces&quot; (configure
         <value>MEProcess</value>
         <value>MESetup</value>
         <value>view</value>
+      </context>
+    </preference>
+    <preference name="LHN_Nav_Items_List" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Specifies rich client navigation pane section order and whether each section is expanded, collapsed, or displayed at startup.
+Valid Values:
+SearchSection:[true/false]
+QuickLinksSection:[true/false]
+OpenItemsSection:[true/false]
+HistorySection:[true/false]
+FavoritesSection:[true/false]
+IWantToSection:[true/false]</preference_description>
+      <context name="Teamcenter">
+        <value>SearchSection:true</value>
+        <value>QuickLinksSection:true</value>
+        <value>OpenItemsSection:false</value>
+        <value>HistorySection:true</value>
+        <value>FavoritesSection:true</value>
+        <value>IWantToSection:true</value>
+      </context>
+    </preference>
+    <preference name="OpenAfterCreatePref" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>This preference controls the initial state of the &quot;Open On Create&quot; checkbox, located on the creation dialog for any new object. The default value is 0.</preference_description>
+      <context name="Teamcenter">
+        <value>0</value>
       </context>
     </preference>
     <preference name="Part Revision_PseudoFolder" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
@@ -430,6 +1296,32 @@ For example, if the preference value &quot;geometric_interfaces&quot; (configure
         <value>view</value>
       </context>
     </preference>
+    <preference name="Selection Criteria" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Sets the criteria used for pre-selection of attachments for Item Revision objects for Check-in/Out in the Explore Dialog.
+For example, for the below case, all the objects of type UGMASTER having a IMAN_specification relation with the Item Revision object will be pre-selected in the Explore Dialog.
+Valid values are in the format TypeInternalName followed by 10 spaces and then, RelationInternalName.
+At all times, one of the two preferences &quot;Selection Criteria&quot; or &quot;Select IR&quot; must be set, otherwise the &quot;Check-In/Check-Out&quot; of Item Revision objects will not work. However, this preference&apos;s values take precedence over values of these other two preferences.
+If this preference is not set and &quot;Select IR&quot; preference is set ,then only the Item Revision objects are selected and not their attachments.</preference_description>
+      <context name="Teamcenter">
+        <value>UGMASTER          IMAN_specification</value>
+        <value>UGPART          IMAN_specification</value>
+      </context>
+    </preference>
+    <preference name="TC_display_real_prop_names" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Indicates if Teamcenter has to display the real property names.</preference_description>
+      <context name="Teamcenter">
+        <value>0</value>
+      </context>
+    </preference>
+    <preference name="TC_suppress_inactive_group_members" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Used to suppress inactive group members. This is a user preference and it will be considered only from Group Administrators and System Administrators. In the case of normal users, the value of the preference will not be considered. Valid values are 0/1.
+0 - SA/GA can see both active and inactive group members.
+1 - SA/GA cannot see the inactive group members in Group Members dialog in SA applications.
+The default value is 1.</preference_description>
+      <context name="Teamcenter">
+        <value>1</value>
+      </context>
+    </preference>
   </category>
   <category name="Rich Client.Search">
     <category_description>No description available for this category.</category_description>
@@ -438,7 +1330,16 @@ For example, if the preference value &quot;geometric_interfaces&quot; (configure
 Valid Values:
 Accepts a single string as a value. Must be a valid saved query.</preference_description>
       <context name="Teamcenter">
-        <value>gEAAAAgYpObYAC</value>
+        <value>gEAAAAgYZqsrVB</value>
+      </context>
+    </preference>
+  </category>
+  <category name="Thin Client">
+    <category_description>No description available for this category.</category_description>
+    <preference name="Create_Folder_mru_list" type="String" array="true" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Defines a list of most recently used types for Folder creation.</preference_description>
+      <context name="Teamcenter">
+        <value>Folder</value>
       </context>
     </preference>
   </category>
