@@ -15,7 +15,6 @@ Unpublished - All Rights Reserved
         <property name="owning_user"/>
         <property name="last_mod_date"/>
         <property name="object_type"/>
-        <property name="release_status_list" renderingHint="label"/>
     </header>
     <page titleKey="tc_xrt_Overview" title="Overview">
         <column>
