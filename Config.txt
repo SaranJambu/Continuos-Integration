@@ -1,0 +1,10 @@
+BmidePackageVersion=C:\Siemens\Teamcenter14\TR\bmide\workspace\14000.0.0\mi8tcsolution\output\wntx64\packaging\full_update\mi8tcsolution_wntx64_11_2025_03_03_18-41-02\media_teamcenter_mi8tcsolution.xml
+InputXml=C:\Users\infodba\Downloads\Env_001_quick_deploy_configuration.xml
+QD_Bat=C:\Siemens\DeploymentCenter\webserver\additional_tools\dc_quick_deploy\dc_quick_deploy.bat
+environment=Env_001
+inputFile=C:\Users\infodba\Downloads\Env_001_quick_deploy_configuration.xml
+dcusername=dcadmin
+dcpassword=dcadmin
+dcUrl=http://vmtc:8009/deploymentcenter
+scriptDirectoryName=BMIDE_Script_new
+ProjectName=mi8tcsolution
