@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import subprocess
+import sys
 
 # Read the config file
 def read_config(Config_list):
@@ -68,10 +69,22 @@ if __name__=="__main__":
     # Run the batch file with arguments
     bat_args_LIST=bat_args(required_keys)
     result = subprocess.run([bat_file] + bat_args_LIST, capture_output=True, text=True, shell=True)
-    print("Output:", result.stdout)
-    print("Errors:", result.stderr)
-    # if result.returncode !=0:
-        # print("Errors:", process.stderr)
-    #     print("Errors",result.stderr.decode())
-    # else:
-    #     print("Successfully executed",result.stdout)
+    # print("Output:", result.stdout)
+    # print("Errors:", result.stderr)
+
+    # print("Output:", result.stdout)
+
+    if result.returncode != 0:
+        print("ERROR: Batch file failed")
+        sys.exit(result.returncode)  # Pass the batch file's exit code to Jenkins
+
+    print("SUCCESS: Batch file completed")
+    sys.exit(0)
+
+    # try:
+    #     # Your logic here
+    #     print("SUCCESS")
+    #     result.exit(0)  # Exit with success
+    # except Exception as e:
+    #     print(f"ERROR: {str(e)}")
+    #     result.exit(1)
