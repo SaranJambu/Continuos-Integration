@@ -76,6 +76,7 @@ if __name__=="__main__":
 
     if result.returncode != 0:
         print("ERROR: Batch file failed")
+        print("Errors:", result.stderr)
         sys.exit(result.returncode)  # Pass the batch file's exit code to Jenkins
 
     print("SUCCESS: Batch file completed")
