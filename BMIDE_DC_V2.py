@@ -69,17 +69,18 @@ if __name__=="__main__":
     # Run the batch file with arguments
     bat_args_LIST=bat_args(required_keys)
     result = subprocess.run([bat_file] + bat_args_LIST, capture_output=True, text=True, shell=True)
-    print("Output Run :", result.stdout)
-    print("Generated Errors:", result.stderr)
+    # print("Output Run :", result.stdout)
+    # print("Generated Errors:", result.stderr)
 
     # print("Output:", result.stdout)
 
     if result.returncode != 0:
-        print("ERROR: Batch file failed")
-       # print("Errors:", result.stderr)
+        print("Batch file failed")
+        print("OUTPUT:", result.stdout)
         sys.exit(result.returncode)  # Pass the batch file's exit code to Jenkins
 
     print("SUCCESS: Batch file completed")
+    print("OUTPUT2 :", result.stdout)
     sys.exit(0)
 
     # try:
