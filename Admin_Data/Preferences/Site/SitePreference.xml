@@ -262,13 +262,13 @@ http://ghi.com</preference_description>
 	</category>
 	<category name="General">
 <preference name="A7engine.CREATERENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
-      <preference_description>This is an internal preference Devops test demo.</preference_description>
+      <preference_description>This is an internal preference Devops 2.</preference_description>
       <context name="Teamcenter">
         <value>Item</value>
       </context>
     </preference>
     <preference name="A7engine.SUMMARYRENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
-      <preference_description>This is an internal preference Devops test demo.</preference_description>
+      <preference_description>This is an internal preference Devops 2.</preference_description>
       <context name="Teamcenter">
         <value>Item</value>
       </context>
