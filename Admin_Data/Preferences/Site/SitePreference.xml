@@ -8,6 +8,12 @@
 <value>Awp0DesignPartCreate</value>
 </context>
 </preference>
+<preference name="AWC_J9ServicePart.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
+<preference_description>Create stylesheet for Service part creation for devops</preference_description>
+<context name="Teamcenter">
+<value>Awp0J9ServicePartCreate</value>
+</context>
+</preference>
 <preference name="AWC_J9DesignPartRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
 <preference_description>Service Part revision summary rendering</preference_description>
 <context name="Teamcenter">
