@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences version="10.0">
+<category name="FMS">
+    <category_description>No description available for this category.</category_description>
+    <preference name="DM_Write_Ticket_Expiration_Interval" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+      <preference_description>Determine the time interval (in seconds) used by FMS (File Management System) in order to set the Download Manager write ticket expiration time.
+If this value is not set, the ticket expiration interval is set to 259200 seconds (72 hrs) by default.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="Default_Transient_Server" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+      <preference_description>Specifies the default transient file server location. Environment variable settings override this FCC configuration file setting.
+Valid Values:
+Accepts a single value. Must be a valid transient file server location. For example:
+Default_Transient_Serrver = http://www.transientserver.com</preference_description>
+      <context name="Teamcenter">
+        <value>http://TSRKTBLRL049:4544</value>
+      </context>
+    </preference>
+    <preference name="Default_Transient_Volume_Id" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="true">
+      <preference_description>Defines the corporate server transient volume. This preference must be defined to enable transfer of multi-site export metadata from site to site when running in a two-tier environment.
+Valid Values:
+Accepts a single value. Must be a valid transient volume ID.</preference_description>
+      <context name="Teamcenter">
+        <value>b1566940451ab5643c431aab84fb9f08</value>
+      </context>
+    </preference>
+    <preference name="FMS_SAF_Batch_Transfer_Enabled" type="Logical" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Enables FMS Store and Forward in batch transfer mode.Store and forward functionality can be implemented by two different methods:Single file: moves and cleans up files from the local volume one file at a time.This method uses dispatcher functionality.Batch method: queries the Teamcenter database all of the user&apos;s files stored in local volumes and transfers them to their specified destination volumes.
+This method combines move_volume_files utility and dispatcher functionality. Store and forward functionality defines default local volumes to be temporary local volumes that allow files to be stored locally before they are automatically transferred to the final destination volume.  This improves end-user file upload times from clients by uploading files to a temporary volume. Store and forward functionality requires 
+installation of dispatcher scheduler, module, client and the store_and_forward translator.
+Valid Values:
+True - Enables store and forward functionality in batch mode.This requires installation of dispatcher scheduler, module, client and the store_and_forward translator.
+False - Disables store and forward functionality in batch mode.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="HSM_integration_enabled" type="Logical" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Enables the Volume Management application to work with third-party hierarchical storage management (HSM) software.
+Valid Values:
+true - Enables the Volume Management application to work with third-party HSM software.
+false - Disables the Volume Management application from working with third-party HSM software.</preference_description>
+      <context name="Teamcenter">
+        <value>FALSE</value>
+      </context>
+    </preference>
+    <preference name="HSM_primary_tier_hosts" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Defines the host names on which the primary tier volumes are managed by third-party HSM software.HSM migration is applied to the volume files residing on hosts defined by this preference. The hsm_capacity_alert utility estimates the capacities of the volumes and uses the values defined in this preference to send e-mail alerts when the primary tier capacity exceeds alert levels. Volumes residing on hosts not defined by this preference are ignored for HSM migration and the hsm_capacity_alert utility.
+Valid Values:
+Accepts multiple strings as values. Each string must be a valid host name on which primary tier volumes reside. If all primary tier volumes are managed by third-party HSM software, you can set this preference to ALL rather than listing the individual host names.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="HSM_read_thru_supported" type="Logical" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Declares whether read access to secondary and tertiary volumes is supported. If your HSM system or hardware platform does not support read access from secondary and tertiary volumes, the migrated files are moved to a higher tier to be read. For example, the IBM Tivoli HSM product does not provide read-through capability, and the EMC DiskXtender HSM product only provides read-through capability on Windows. In such situations, use reverse migration to return files to the primary tier. If this preference is 
+set to false, the system moves the migrated files to a higher tier during the read operation, then during the next migration, returns the files to the tiers from which they were retrieved.This preference requires that the HSM_integration_enabled preference be set to true.
+Valid Values:
+true - Migrated files are not moved to a higher tier during the read operation.
+false - Migrated files are moved to a higher tier during the read operation. The files are returned to the tiers from which they were stored in subsequent migrations.</preference_description>
+      <context name="Teamcenter">
+        <value>TRUE</value>
+      </context>
+    </preference>
+    <preference name="Multisite_Ticket_Expiration_Interval" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies how long, in seconds, the ticket is good for access. Add this value to the current time when the ticket is generated to calculate the ticket expiration time. Environment variable settings override this FCC configuration file setting.
+Valid Values:
+Single positive integer.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_Cache_Allowed" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Indicates if local file caching is enabled or not.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_Cache_Protection" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Indicates the operating system protection applied to the files stored in the file cache.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_Store_and_Forward" type="Logical" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines whether store and forward functionality is enabled, improving upload performance for remote users. This functionality improves end-user file upload times from clients by uploading files to a temporary volume. Users can continue to work on their files from the temporary location. The system moves the files to its final destination according to administer-defined criteria. Files are accessible to 
+FMS at all times. Enable this functionality by defining a default local volume (an initial upload volume) for users or groups and setting this preference to true. When users upload files, the files are temporarily uploaded to the defined initial FMS volume, returning control to the user in the client. In the background, the files are transferred to the final destination volume. This allows you to place an FMS volume on the 
+remote users LAN, ensuring quick uploads into the FMS of this temporary volume. All file transfers are transparent to end users.You can view the status of file transfers from the Dispatcher request administration console.By default, the store and forward functionality moves files from the local volume to their final destination volume one at a time (using the fmstranslator Dispatcher translator). If you set the 
+FMS_SAF_Batch_Transfer_Enabled preference to true, you can use the store_and_forward Dispatcher translator to upload files in batch.
+Valid Values:
+true - Enables store and forward functionality.
+false - Disables store and forward functionality by instructing the system to ignore the default local volume setting, uploading files directly to the destination volume.This setting is useful to quickly disable store and forward functionality. For example, if the scheduler or initial volume at a site goes offline unexpectedly, you can use this setting to quickly disable store and forward. The alternative is to alter the initial volume settings of all impacted users, which is a lengthy task.</preference_description>
+      <context name="Teamcenter">
+        <value>FALSE</value>
+      </context>
+    </preference>
+    <preference name="TC_Store_and_Forward_Transfer_Delay" type="Integer" array="false" disabled="false" protectionScope="User" envEnabled="false">
+      <preference_description>Determines (in minutes) how long file transfer is delayed between file upload to the initial volume and file upload to the final destination volume.Use this preference to improve performance if you have a large amount of revisions created, cached, and purged at your site. Because the transfer task does not transfer purged filed, if numerous file revisions are saved frequently at your site, a delay time long enough to allow revisions to be purged before the transfer to the final 
+destination volume reduces network traffic. For example, consider a site where all user files are automatically saved every 15 minutes, and purged after every third revision. If store and forward functionality is enabled, and this preference is set to 46, the transfer task activates every 46 minutes, sees that the revisions have been purged, and does not attempt the transfer. Only files not purged are transferred to the destination volume, decreasing network traffic.
+Valid Values:
+Any positive integer.</preference_description>
+      <context name="Teamcenter">
+        <value>0</value>
+      </context>
+    </preference>
+    <preference name="TC_VOLUME_MONITOR_CRITICAL_LEVEL" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies the percentage full a volume must reach to achieve critical level. When a volume&apos;s capacity reaches critical level, its volume data is colored red in the Volume Monitor view of the Volume Management perspective. Additionally, such volumes display when filtering the table tree to list only volumes with a severity of Critical.
+Valid Values:
+Accepts a single value between 1 and 99, inclusive. The value must be greater than the value set for the TC_VOLUME_MONITOR_WARNING_LEVEL preference.</preference_description>
+      <context name="Teamcenter">
+        <value>90</value>
+      </context>
+    </preference>
+    <preference name="TC_VOLUME_MONITOR_WARNING_LEVEL" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies the percentage full a volume must reach to achieve warning level. When a volume&apos;s capacity reaches warning level, its volume data is colored yellow in the Volume Monitor view of the Volume Management perspective. Additionally, such volumes display when filtering the table tree to list only volumes with a severity of Warning.
+Valid Values:
+Accepts a single value between 1 and 99, inclusive. The value must be less than the value set for the TC_VOLUME_MONITOR_CRITICAL_LEVEL preference.</preference_description>
+      <context name="Teamcenter">
+        <value>80</value>
+      </context>
+    </preference>
+    <preference name="TC_Volume_Failover_Trigger" type="Double" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies the percentage full a volume must reach to trigger volume failover behavior for importing files. When volume capacity reaches the percentage full specified by this preference, importing files are directed to the failover volume specified by the TC_Volume_Failover_Volume_Name preference.This preference setting is used by the system only when the TC_Volume_Failover_Volume_Name preference is set.
+Valid values are
+Accepts a single float value, from 0-100.Siemens PLM Software recommends setting this preference between 80 and 95. Setting this value too low triggers failover behavior too often. Setting this value too high prevents failover behavior from initiating.</preference_description>
+      <context name="Teamcenter">
+        <value>90</value>
+      </context>
+    </preference>
+    <preference name="TC_Volume_Failover_Volume_Map" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies a mapping of failover (alternate) volumes. This preference can be used when a volume is marked as read-only or is otherwise inaccessible for write operations. Specifying the alternate volume using this preference ensures that future write operations are done to the alternate volume.
+Valid Values:
+Accepts a single string as a value. The string must include valid volume names. Each value should be of the form: 
+source-volume:destination-volume
+The mappings can be cascaded such that an entry of the form VolA:VolB and VolB:VolC indicates that the system should use VolC when VolA is the current volume.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_Volume_Failover_Volume_Name" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies the volume to use in failover situations during file import. Setting this preference with a volume name prompts the system to check the original target volume before import. If the target volume is filled beyond the capacity specified by the TC_Volume_Failover_Trigger preference, the imported file is directed to the failover volume specified by this preference.
+Valid Values:
+Accepts a single string as a value; the string must be a valid volume name.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_Volume_Status_Resync_Interval" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Indicates the minimum amount of time (in seconds) that must pass before the percentage full value of a volume is retrieved from the FSC. The percentage full values are cached to prevent excessive FSC requests. The system only checks for this cached value during file import, and only when volume failover during file import behavior is enabled by setting the TC_Volume_Failover_Volume_Name preference.
+Valid Values:
+Accepts a single positive integer as a value.Siemens PLM Software recommends keeping this setting similar to the default value. Setting this value too high causes the cached percentage full value to be out of date. Setting this value too low generates excessive FSC requests.</preference_description>
+      <context name="Teamcenter">
+        <value>600</value>
+      </context>
+    </preference>
+    <preference name="TC_allow_inherited_group_volume_access" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Allows a group to inherit access to a Teamcenter volume from its parent group. That is, if a group is explicitly granted volume access, and this preference is set to a nonzero number, that group&apos;s subgroups (and the subgroup&apos;s children) are implicitly granted access to that volume.
+Inherited access applies to all volumes including default local volumes, also known as store and forward volumes.
+Valid Values:
+0 - Does not allow groups to inherit access to a volume from its parent group.
+Single positive integer - Allows groups to inherit access to a volume from its parent group.</preference_description>
+      <context name="Teamcenter">
+        <value>0</value>
+      </context>
+    </preference>
+    <preference name="TC_enable_backup_modes" type="Logical" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Determines whether backup functionality is enabled. The integrated backup and recovery feature facilitates third-party backup systems to perform online backup, allowing Teamcenter to operate continually.
+This functionality focuses on the area of backing up metadata and file, and recovering that data in different restoration scenarios. To accomplish this, the integrated backup feature places Teamcenter in different operation modes using the backup_modes utility.
+Valid Values:
+true - Enables backup functionality.
+false - Disables backup functionality.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="TC_sfr_process_life_time" type="Integer" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies (in minutes) how long the system continues to check for recovered files after a user-initiated single file recovery action is activated.
+Valid values:
+Accepts a single string as a value. Must be a positive integer.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="TC_sfr_recovery_interval" type="Integer" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies (in seconds) how often the system checks for recovered files after a user-initiated single file recovery action is activated. This preference is used for single file recovery.
+Valid values:
+Accepts a single string as a value. Must be a positive integer.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="Ticket_Expiration_Interval" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies how long, in seconds, the ticket is good for access. Add this value to the current time when the ticket is generated to calculate the ticket expiration time. Environment variable settings override this FCC configuration file setting.
+Valid Values:
+Single positive integer.</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="Ticket_Expiration_Resolution" type="Integer" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Indicates the resolution (minimum amount of time in seconds) before the FMS ticket expiration is changed.
+Setting this value advances the computed expiration time up to the value set, and limits the change in expiration time by the resolution.
+This value can be used to improve performance of browser client applications that render files stored in FMS such as thumbnails. 
+This value should not be large and should not be larger than the normal ticket expiration intervals. 
+If this value is not set, a default of 7200 seconds is used.</preference_description>
+      <context name="Teamcenter">
+        <value>7200</value>
+      </context>
+    </preference>
+    <preference name="Transient_Volume_Installation_Location" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Transient_Volume_Installation_Location</preference_description>
+      <context name="Teamcenter">
+        <value>TSRKTBLRL049</value>
+      </context>
+    </preference>
+    <preference name="Transient_Volume_RootDir" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="true">
+      <preference_description>Specifies the transient volume&apos;s root directory. This preference accepts multiple values to support a UNIX/Windows heterogeneous site. FMS takes the first value which is valid for the platform, UNIX or Windows; the validity check is simply the presence or absence of a backslash (\) character. Environment variable settings override this FCC configuration file setting. Transient volumes are file locations to which TcServer processes have direct access. These locations are typically used for server side file generation operations such as PLM XML files. Files within transient volumes are typically generated by the TcServer, read by a client (usually) once, then deleted.This preference is set during the initial database population. Its value should not be changed, even if several other Teamcenter installations point to the same pre-populated database.
+Valid Values:
+Accepts multiple values, in order to support a UNIX/Windows heterogeneous site. For example:
+Transient_Volume_RootDir=
+C:\temp
+/tmp
+You cannot define the path as a UNC path, for example, \\server\shared-transient-folder. You must use a direct path location. This is partly due to the fact that some ZIP archive utilities do not accept UNC paths, resulting in failure of exports to Microsoft Excel or Word.</preference_description>
+      <context name="Teamcenter">
+        <value>/tmp/transientVolume_Infodba</value>
+        <value>C:\Temp\transientVolume_Infodba</value>
+      </context>
+    </preference>
+    <preference name="Use_DataShare_Manager" type="Logical" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Activates the use of the Data Share Manager for uploading and downloading files. The Data Share Manager is an asynchronous file upload and download async application for File Management System (FMS) transactions.
+Valid Values:
+true - Perform asynchronous file uploads and downloads and monitor them with the Data Share Manager.
+false - Use the File Management System (FMS) to perform synchronous file uploads and downloads. This is the default value.</preference_description>
+      <context name="Teamcenter">
+        <value>false</value>
+      </context>
+    </preference>
+    <preference name="blobbyVolume_NT" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies an alternate volume location on a Windows platform, allowing for constant Teamcenter availability during hot backup.
+Valid Values:
+Accepts a single string as a value. Must be a valid volume location. Maximum character length of the string is 15 characters. For example:
+c:\temp</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+    <preference name="blobbyVolume_UNX" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Specifies an alternate volume location on a UNIX platform, allowing for constant Teamcenter availability during hot backup.
+Valid Values:
+Accepts a single string as a value. Must be a valid volume location. Maximum character length of a string is 15 characters. For example:/tmp</preference_description>
+      <context name="Teamcenter">
+      </context>
+    </preference>
+  </category>
+ <category name="File Caching">
+    <category_description>No description available for this category.</category_description>
+	    <preference name="Fms_BootStrap_Urls" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="true">
+      <preference_description>Indicates the list of FMS Bootstrap (Entry point) servers for FMS client applications like the Thin Client, the Teamcenter server and Teamcenter utilities. Active Workspace has its own set of FMS Bootstrap URLs defined in its deployment. Desktop clients like the Teamcenter Rich Client and NX that use the File Cache Client (FCC) have their list of bootstrap FMS servers defined in the fcc.xml.
+The fcc.xml should typically have the same set of FMS servers defined as this Bootstrap URL list. Once FMS is initialized using the Bootstrap URLs, the client application typically gets one or more Assigned FSCs (File Server Cache) that serve the subsequent FMS file requests. Any FSC can act as the FMS Bootstrap URL. For failover purposes, you can include multiple FMS servers in this preference.
+This preference can be set using the preference name as an environment variable.
+Valid Values:
+Accepts multiple strings as values. Each string must be a valid server location. For example:
+Fms_BootStrap_Urls=
+http://abc.com
+http://def.com:4040
+http://ghi.com</preference_description>
+      <context name="Teamcenter">
+        <value>http://TSRKTBLRL049:4544</value>
+      </context>
+    </preference>
+	</category>
+	<category name="General">
+<preference name="A7engine.CREATERENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference Devops 2.</preference_description>
+      <context name="Teamcenter">
+        <value>Item</value>
+      </context>
+    </preference>
+    <preference name="A7engine.SUMMARYRENDERING" type="String" array="true" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>This is an internal preference Devops 2.</preference_description>
+      <context name="Teamcenter">
+        <value>Item</value>
+      </context>
+    </preference>
+	</category>
+ </preferences>
