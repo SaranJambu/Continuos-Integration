@@ -29,6 +29,7 @@
                 <property name="object_desc"/>
                 <property name="object_type"/>
 <property name="j9DesignDept"/>
+                <property name="j9DesignDept"/>
                 <property name="release_status_list" renderingHint="label"/>
                 <property name="date_released" renderingHint="label"/>
                 <property name="effectivity_text" renderingHint="label"/>
