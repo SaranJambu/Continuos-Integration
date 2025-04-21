@@ -17,6 +17,7 @@
             <property name="object_name"/>
             <property name="object_desc"/>
             <property name="revision:j9Material"/>
+            <property name="revision:j9Material"/>
             <inject type="dataset" src="Ads1OriginalCageCodeProperty"/>
             <property name="uom_tag"/>
             <inject type="dataset" src="Ads1ADSPartCreate"/>
