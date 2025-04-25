@@ -26,11 +26,5 @@
 <value>AWP0J9ServicePartRevisionSummary</value>
 </context>
 </preference>
-<preference name="AWC_J9DevopDemo.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
-<preference_description>Create stylesheet for Devops Demo part</preference_description>
-<context name="Teamcenter">
-<value>Awp0J9DevopdemoPartCreate</value>
-</context>
-</preference>
 </category>
 </preferences>
