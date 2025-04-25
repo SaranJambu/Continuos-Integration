@@ -23,7 +23,7 @@
 <preference name="AWC_J9ServicePartRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
 <preference_description>Service Part revision summary rendering</preference_description>
 <context name="Teamcenter">
-<value>AWP0J9ServicePartRevisionSummary</value>
+<value>Awp0J9ServicePartRevisionSummary</value>
 </context>
 </preference>
 <preference name="AWC_J9DevopDemo.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
