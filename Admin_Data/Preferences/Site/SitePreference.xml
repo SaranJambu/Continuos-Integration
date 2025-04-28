@@ -5,7 +5,7 @@
 <preference name="AWC_J9DesignPart.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
 <preference_description>Create stylesheet for design part creation</preference_description>
 <context name="Teamcenter">
-<value>Awp0DesignPartCreate</value>
+<value>Awp0J9DesignPartCreate</value>
 </context>
 </preference>
 <preference name="AWC_J9ServicePart.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
@@ -23,7 +23,7 @@
 <preference name="AWC_J9ServicePartRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
 <preference_description>Service Part revision summary rendering</preference_description>
 <context name="Teamcenter">
-<value>Awp0J9ServicePartRevisionSummary</value>
+<value>Awp0J9ServicePartRevision</value>
 </context>
 </preference>
 <preference name="AWC_J9DevopDemo.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="User" envEnabled="false">
